@@ -1,18 +1,23 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using SchoolDays.UI.Vistas;
 
 namespace SchoolDays.UI
 {
     public partial class Form1 : Form
     {
 
-        #region Metodos x
+        #region Metodos 
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            pictureBox1_Click(null, e);
+        }
         private void panelCentral_Paint(object sender, PaintEventArgs e)
         {
 
@@ -79,10 +84,37 @@ namespace SchoolDays.UI
 
         #endregion
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new MenuPrincipal());
+
+        }
+        private void btnAlumnos_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new Alumnos());
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        #region Metodo para mostrar en el panel
+
+        private void AbrirForm(object formhija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+            {
+                this.panelContenedor.Controls.RemoveAt(0);
+            }
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
+        #endregion
 
         #endregion
 
@@ -99,9 +131,14 @@ namespace SchoolDays.UI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+
+
+
         #endregion
 
+        private void ii(object sender, FormClosedEventArgs e)
+        {
 
-
+        }
     }
 }
