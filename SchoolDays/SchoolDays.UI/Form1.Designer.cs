@@ -59,6 +59,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnAgrgarAlumnos = new System.Windows.Forms.Button();
             this.btnListaAlumnos = new System.Windows.Forms.Button();
+            this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -151,12 +152,13 @@
             // 
             // panelAlumnos
             // 
+            this.panelAlumnos.Controls.Add(this.btnModificarAlumno);
             this.panelAlumnos.Controls.Add(this.btnListaAlumnos);
             this.panelAlumnos.Controls.Add(this.btnAgrgarAlumnos);
             this.panelAlumnos.Controls.Add(this.panel11);
             this.panelAlumnos.Controls.Add(this.panel5);
             this.panelAlumnos.Controls.Add(this.panel12);
-            this.panelAlumnos.Location = new System.Drawing.Point(29, 141);
+            this.panelAlumnos.Location = new System.Drawing.Point(26, 141);
             this.panelAlumnos.Name = "panelAlumnos";
             this.panelAlumnos.Size = new System.Drawing.Size(136, 100);
             this.panelAlumnos.TabIndex = 0;
@@ -484,6 +486,22 @@
             this.btnListaAlumnos.UseVisualStyleBackColor = false;
             this.btnListaAlumnos.Click += new System.EventHandler(this.btnListaAlumnos_Click);
             // 
+            // btnModificarAlumno
+            // 
+            this.btnModificarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnModificarAlumno.FlatAppearance.BorderSize = 0;
+            this.btnModificarAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnModificarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarAlumno.ForeColor = System.Drawing.Color.White;
+            this.btnModificarAlumno.Location = new System.Drawing.Point(6, 61);
+            this.btnModificarAlumno.Name = "btnModificarAlumno";
+            this.btnModificarAlumno.Size = new System.Drawing.Size(125, 23);
+            this.btnModificarAlumno.TabIndex = 0;
+            this.btnModificarAlumno.Text = "Modificar";
+            this.btnModificarAlumno.UseVisualStyleBackColor = false;
+            this.btnModificarAlumno.Click += new System.EventHandler(this.btnModificarAlumno_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,6 +564,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnAgrgarAlumnos;
         private System.Windows.Forms.Button btnListaAlumnos;
+        private System.Windows.Forms.Button btnModificarAlumno;
     }
 }
 

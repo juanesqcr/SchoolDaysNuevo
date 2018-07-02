@@ -109,7 +109,16 @@ namespace SchoolDays.UI
 
         private void btnListaAlumnos_Click(object sender, EventArgs e)
         {
+            panelAlumnos.Visible = false;
+
             AbrirForm(new ListaAlumnos());
+        }
+
+        private void btnModificarAlumno_Click(object sender, EventArgs e)
+        {
+            panelAlumnos.Visible = false;
+
+            AbrirForm(new Modificar());
         }
         #endregion
 
@@ -162,6 +171,6 @@ namespace SchoolDays.UI
 
         }
 
-
+       
     }
 }

@@ -22,3 +22,4 @@ C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\obj\Debug\SchoolDays.UI.Vistas.MenuPrincipal.resources
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\obj\Debug\SchoolDays.UI.Vistas.Profesor.resources
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\obj\Debug\SchoolDays.UI.Vistas.ListaAlumnos.resources
+C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\obj\Debug\SchoolDays.UI.Vistas.Modificar.resources

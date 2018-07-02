@@ -21,5 +21,10 @@ namespace SchoolDays.UI.Vistas
         {
 
         }
+
+        private void txtOtroCorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
