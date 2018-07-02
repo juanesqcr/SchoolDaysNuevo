@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnNormal = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panelMenuVertical = new System.Windows.Forms.Panel();
+            this.panelAlumnos = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.panelSubMenuReportes = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -55,13 +56,16 @@
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnAgrgarAlumnos = new System.Windows.Forms.Button();
+            this.btnListaAlumnos = new System.Windows.Forms.Button();
+            this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panelMenuVertical.SuspendLayout();
+            this.panelAlumnos.SuspendLayout();
             this.panelSubMenuReportes.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -72,14 +76,13 @@
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panelSuperior.Controls.Add(this.pictureBox2);
-            this.panelSuperior.Controls.Add(this.btnNormal);
-            this.panelSuperior.Controls.Add(this.btnMaximizar);
             this.panelSuperior.Controls.Add(this.btnMinimizar);
             this.panelSuperior.Controls.Add(this.btnCerrar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(2);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1300, 35);
+            this.panelSuperior.Size = new System.Drawing.Size(975, 28);
             this.panelSuperior.TabIndex = 0;
             this.panelSuperior.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSuperior_Paint);
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
@@ -90,48 +93,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(490, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(368, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(217, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(163, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnNormal
-            // 
-            this.btnNormal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNormal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNormal.Image = ((System.Drawing.Image)(resources.GetObject("btnNormal.Image")));
-            this.btnNormal.Location = new System.Drawing.Point(1232, 7);
-            this.btnNormal.Name = "btnNormal";
-            this.btnNormal.Size = new System.Drawing.Size(25, 25);
-            this.btnNormal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnNormal.TabIndex = 3;
-            this.btnNormal.TabStop = false;
-            this.btnNormal.Visible = false;
-            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1232, 7);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMaximizar.TabIndex = 2;
-            this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1201, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(924, 6);
+            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMinimizar.Size = new System.Drawing.Size(19, 20);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 1;
             this.btnMinimizar.TabStop = false;
@@ -142,9 +120,10 @@
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1263, 7);
+            this.btnCerrar.Location = new System.Drawing.Point(947, 6);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrar.Size = new System.Drawing.Size(19, 20);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
@@ -153,6 +132,7 @@
             // panelMenuVertical
             // 
             this.panelMenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelMenuVertical.Controls.Add(this.panelAlumnos);
             this.panelMenuVertical.Controls.Add(this.panelSubMenuReportes);
             this.panelMenuVertical.Controls.Add(this.panel4);
             this.panelMenuVertical.Controls.Add(this.btnSalir);
@@ -164,10 +144,43 @@
             this.panelMenuVertical.Controls.Add(this.btnAlumnos);
             this.panelMenuVertical.Controls.Add(this.btnPrincipal);
             this.panelMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenuVertical.Location = new System.Drawing.Point(0, 35);
+            this.panelMenuVertical.Location = new System.Drawing.Point(0, 28);
+            this.panelMenuVertical.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenuVertical.Name = "panelMenuVertical";
-            this.panelMenuVertical.Size = new System.Drawing.Size(220, 615);
+            this.panelMenuVertical.Size = new System.Drawing.Size(165, 500);
             this.panelMenuVertical.TabIndex = 1;
+            // 
+            // panelAlumnos
+            // 
+            this.panelAlumnos.Controls.Add(this.btnModificarAlumno);
+            this.panelAlumnos.Controls.Add(this.btnListaAlumnos);
+            this.panelAlumnos.Controls.Add(this.btnAgrgarAlumnos);
+            this.panelAlumnos.Controls.Add(this.panel11);
+            this.panelAlumnos.Controls.Add(this.panel5);
+            this.panelAlumnos.Controls.Add(this.panel12);
+            this.panelAlumnos.Location = new System.Drawing.Point(26, 141);
+            this.panelAlumnos.Name = "panelAlumnos";
+            this.panelAlumnos.Size = new System.Drawing.Size(136, 100);
+            this.panelAlumnos.TabIndex = 0;
+            this.panelAlumnos.Visible = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel11.Location = new System.Drawing.Point(0, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(5, 26);
+            this.panel11.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel12.Location = new System.Drawing.Point(0, 31);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(5, 26);
+            this.panel12.TabIndex = 2;
             // 
             // panelSubMenuReportes
             // 
@@ -177,9 +190,10 @@
             this.panelSubMenuReportes.Controls.Add(this.btnReporte);
             this.panelSubMenuReportes.Controls.Add(this.panel6);
             this.panelSubMenuReportes.Controls.Add(this.btnGraduados);
-            this.panelSubMenuReportes.Location = new System.Drawing.Point(35, 249);
+            this.panelSubMenuReportes.Location = new System.Drawing.Point(26, 202);
+            this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(2);
             this.panelSubMenuReportes.Name = "panelSubMenuReportes";
-            this.panelSubMenuReportes.Size = new System.Drawing.Size(185, 118);
+            this.panelSubMenuReportes.Size = new System.Drawing.Size(139, 96);
             this.panelSubMenuReportes.TabIndex = 8;
             this.panelSubMenuReportes.Visible = false;
             // 
@@ -187,34 +201,38 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(0, 79);
+            this.panel9.Location = new System.Drawing.Point(0, 64);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(5, 32);
+            this.panel9.Size = new System.Drawing.Size(4, 26);
             this.panel9.TabIndex = 14;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel10.Location = new System.Drawing.Point(-87, 0);
+            this.panel10.Location = new System.Drawing.Point(-65, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(5, 32);
+            this.panel10.Size = new System.Drawing.Size(4, 26);
             this.panel10.TabIndex = 13;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(0, 41);
+            this.panel7.Location = new System.Drawing.Point(0, 33);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(5, 32);
+            this.panel7.Size = new System.Drawing.Size(4, 26);
             this.panel7.TabIndex = 11;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel8.Location = new System.Drawing.Point(-87, 0);
+            this.panel8.Location = new System.Drawing.Point(-65, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 32);
+            this.panel8.Size = new System.Drawing.Size(4, 26);
             this.panel8.TabIndex = 13;
             // 
             // btnReporteEstudianteGrado
@@ -227,9 +245,10 @@
             this.btnReporteEstudianteGrado.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporteEstudianteGrado.ForeColor = System.Drawing.Color.White;
             this.btnReporteEstudianteGrado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporteEstudianteGrado.Location = new System.Drawing.Point(3, 41);
+            this.btnReporteEstudianteGrado.Location = new System.Drawing.Point(2, 33);
+            this.btnReporteEstudianteGrado.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporteEstudianteGrado.Name = "btnReporteEstudianteGrado";
-            this.btnReporteEstudianteGrado.Size = new System.Drawing.Size(176, 32);
+            this.btnReporteEstudianteGrado.Size = new System.Drawing.Size(132, 26);
             this.btnReporteEstudianteGrado.TabIndex = 14;
             this.btnReporteEstudianteGrado.Text = "Grados";
             this.btnReporteEstudianteGrado.UseVisualStyleBackColor = false;
@@ -245,9 +264,10 @@
             this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 79);
+            this.btnReporte.Location = new System.Drawing.Point(0, 64);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(176, 32);
+            this.btnReporte.Size = new System.Drawing.Size(132, 26);
             this.btnReporte.TabIndex = 12;
             this.btnReporte.Text = "Aulas";
             this.btnReporte.UseVisualStyleBackColor = false;
@@ -256,9 +276,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel6.Location = new System.Drawing.Point(0, 3);
+            this.panel6.Location = new System.Drawing.Point(0, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(5, 32);
+            this.panel6.Size = new System.Drawing.Size(4, 26);
             this.panel6.TabIndex = 9;
             // 
             // btnGraduados
@@ -271,9 +292,10 @@
             this.btnGraduados.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraduados.ForeColor = System.Drawing.Color.White;
             this.btnGraduados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGraduados.Location = new System.Drawing.Point(3, 3);
+            this.btnGraduados.Location = new System.Drawing.Point(2, 2);
+            this.btnGraduados.Margin = new System.Windows.Forms.Padding(2);
             this.btnGraduados.Name = "btnGraduados";
-            this.btnGraduados.Size = new System.Drawing.Size(176, 32);
+            this.btnGraduados.Size = new System.Drawing.Size(132, 26);
             this.btnGraduados.TabIndex = 10;
             this.btnGraduados.Text = "Graduados";
             this.btnGraduados.UseVisualStyleBackColor = false;
@@ -283,9 +305,10 @@
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(3, 571);
+            this.panel4.Location = new System.Drawing.Point(2, 464);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 32);
+            this.panel4.Size = new System.Drawing.Size(4, 26);
             this.panel4.TabIndex = 6;
             // 
             // btnSalir
@@ -299,9 +322,10 @@
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(6, 571);
+            this.btnSalir.Location = new System.Drawing.Point(4, 464);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(202, 32);
+            this.btnSalir.Size = new System.Drawing.Size(152, 26);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -310,9 +334,10 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel3.Location = new System.Drawing.Point(3, 211);
+            this.panel3.Location = new System.Drawing.Point(2, 171);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 32);
+            this.panel3.Size = new System.Drawing.Size(4, 26);
             this.panel3.TabIndex = 4;
             // 
             // btnReportes
@@ -326,9 +351,10 @@
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(6, 211);
+            this.btnReportes.Location = new System.Drawing.Point(4, 171);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(2);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(208, 32);
+            this.btnReportes.Size = new System.Drawing.Size(156, 26);
             this.btnReportes.TabIndex = 5;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = false;
@@ -337,9 +363,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel2.Location = new System.Drawing.Point(3, 173);
+            this.panel2.Location = new System.Drawing.Point(2, 141);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 32);
+            this.panel2.Size = new System.Drawing.Size(4, 26);
             this.panel2.TabIndex = 2;
             // 
             // btnProfesor
@@ -353,19 +380,22 @@
             this.btnProfesor.ForeColor = System.Drawing.Color.White;
             this.btnProfesor.Image = ((System.Drawing.Image)(resources.GetObject("btnProfesor.Image")));
             this.btnProfesor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfesor.Location = new System.Drawing.Point(6, 173);
+            this.btnProfesor.Location = new System.Drawing.Point(4, 141);
+            this.btnProfesor.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfesor.Name = "btnProfesor";
-            this.btnProfesor.Size = new System.Drawing.Size(208, 32);
+            this.btnProfesor.Size = new System.Drawing.Size(156, 26);
             this.btnProfesor.TabIndex = 3;
             this.btnProfesor.Text = "Profesor";
             this.btnProfesor.UseVisualStyleBackColor = false;
+            this.btnProfesor.Click += new System.EventHandler(this.BtnProfesor_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel1.Location = new System.Drawing.Point(3, 135);
+            this.panel1.Location = new System.Drawing.Point(2, 110);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 32);
+            this.panel1.Size = new System.Drawing.Size(4, 26);
             this.panel1.TabIndex = 0;
             // 
             // btnAlumnos
@@ -379,9 +409,10 @@
             this.btnAlumnos.ForeColor = System.Drawing.Color.White;
             this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
             this.btnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlumnos.Location = new System.Drawing.Point(6, 135);
+            this.btnAlumnos.Location = new System.Drawing.Point(4, 110);
+            this.btnAlumnos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlumnos.Name = "btnAlumnos";
-            this.btnAlumnos.Size = new System.Drawing.Size(208, 32);
+            this.btnAlumnos.Size = new System.Drawing.Size(156, 26);
             this.btnAlumnos.TabIndex = 1;
             this.btnAlumnos.Text = "Alumnos";
             this.btnAlumnos.UseVisualStyleBackColor = false;
@@ -390,9 +421,10 @@
             // btnPrincipal
             // 
             this.btnPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrincipal.Image")));
-            this.btnPrincipal.Location = new System.Drawing.Point(3, 6);
+            this.btnPrincipal.Location = new System.Drawing.Point(2, 5);
+            this.btnPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrincipal.Name = "btnPrincipal";
-            this.btnPrincipal.Size = new System.Drawing.Size(211, 107);
+            this.btnPrincipal.Size = new System.Drawing.Size(158, 87);
             this.btnPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnPrincipal.TabIndex = 0;
             this.btnPrincipal.TabStop = false;
@@ -404,22 +436,83 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.panelContenedor.Location = new System.Drawing.Point(220, 35);
+            this.panelContenedor.Location = new System.Drawing.Point(165, 28);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1080, 615);
+            this.panelContenedor.Size = new System.Drawing.Size(810, 500);
             this.panelContenedor.TabIndex = 2;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCentral_Paint);
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel5.Location = new System.Drawing.Point(0, 61);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 26);
+            this.panel5.TabIndex = 2;
+            // 
+            // btnAgrgarAlumnos
+            // 
+            this.btnAgrgarAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAgrgarAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgrgarAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnAgrgarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAgrgarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgrgarAlumnos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgrgarAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnAgrgarAlumnos.Location = new System.Drawing.Point(6, 0);
+            this.btnAgrgarAlumnos.Name = "btnAgrgarAlumnos";
+            this.btnAgrgarAlumnos.Size = new System.Drawing.Size(127, 26);
+            this.btnAgrgarAlumnos.TabIndex = 0;
+            this.btnAgrgarAlumnos.Text = "Agregar Alumno";
+            this.btnAgrgarAlumnos.UseVisualStyleBackColor = false;
+            this.btnAgrgarAlumnos.Click += new System.EventHandler(this.btnAgrgarAlumnos_Click);
+            // 
+            // btnListaAlumnos
+            // 
+            this.btnListaAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnListaAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListaAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnListaAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnListaAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaAlumnos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnListaAlumnos.Location = new System.Drawing.Point(6, 30);
+            this.btnListaAlumnos.Name = "btnListaAlumnos";
+            this.btnListaAlumnos.Size = new System.Drawing.Size(127, 26);
+            this.btnListaAlumnos.TabIndex = 0;
+            this.btnListaAlumnos.Text = "Lista";
+            this.btnListaAlumnos.UseVisualStyleBackColor = false;
+            this.btnListaAlumnos.Click += new System.EventHandler(this.btnListaAlumnos_Click);
+            // 
+            // btnModificarAlumno
+            // 
+            this.btnModificarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnModificarAlumno.FlatAppearance.BorderSize = 0;
+            this.btnModificarAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnModificarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarAlumno.ForeColor = System.Drawing.Color.White;
+            this.btnModificarAlumno.Location = new System.Drawing.Point(6, 61);
+            this.btnModificarAlumno.Name = "btnModificarAlumno";
+            this.btnModificarAlumno.Size = new System.Drawing.Size(125, 23);
+            this.btnModificarAlumno.TabIndex = 0;
+            this.btnModificarAlumno.Text = "Modificar";
+            this.btnModificarAlumno.UseVisualStyleBackColor = false;
+            this.btnModificarAlumno.Click += new System.EventHandler(this.btnModificarAlumno_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.ClientSize = new System.Drawing.Size(975, 528);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenuVertical);
             this.Controls.Add(this.panelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -427,11 +520,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNormal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panelMenuVertical.ResumeLayout(false);
+            this.panelAlumnos.ResumeLayout(false);
             this.panelSubMenuReportes.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -443,8 +535,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelSuperior;
-        private System.Windows.Forms.PictureBox btnNormal;
-        private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Panel panelMenuVertical;
@@ -468,6 +558,13 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnReporteEstudianteGrado;
+        private System.Windows.Forms.Panel panelAlumnos;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnAgrgarAlumnos;
+        private System.Windows.Forms.Button btnListaAlumnos;
+        private System.Windows.Forms.Button btnModificarAlumno;
     }
 }
 

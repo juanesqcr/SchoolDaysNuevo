@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDays.UI", "SchoolDays.UI\SchoolDays.UI.csproj", "{3EAEFEF6-B654-41C7-971F-B17EDFD29B1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDays.DATA", "SchoolDays.DATA\SchoolDays.DATA.csproj", "{948EF59E-107D-4BBC-AEFB-2A7101D7626E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDays.BL", "SchoolDays.BL\SchoolDays.BL.csproj", "{EE20B30E-241C-4E56-A7F1-9839D4FF3336}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3EAEFEF6-B654-41C7-971F-B17EDFD29B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EAEFEF6-B654-41C7-971F-B17EDFD29B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EAEFEF6-B654-41C7-971F-B17EDFD29B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948EF59E-107D-4BBC-AEFB-2A7101D7626E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948EF59E-107D-4BBC-AEFB-2A7101D7626E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948EF59E-107D-4BBC-AEFB-2A7101D7626E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948EF59E-107D-4BBC-AEFB-2A7101D7626E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE20B30E-241C-4E56-A7F1-9839D4FF3336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE20B30E-241C-4E56-A7F1-9839D4FF3336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE20B30E-241C-4E56-A7F1-9839D4FF3336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE20B30E-241C-4E56-A7F1-9839D4FF3336}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -38,12 +38,6 @@ namespace SchoolDays.UI
             Application.Exit();
         }
 
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            btnMaximizar.Visible = false;
-            btnNormal.Visible = true;
-        }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
@@ -51,22 +45,32 @@ namespace SchoolDays.UI
 
         }
 
-        private void btnNormal_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            btnMaximizar.Visible = true;
-            btnNormal.Visible = false;
-        }
-
         #endregion
 
         #region Metodos Menu Vertical
 
-        #region Metodos Menu y Submenu Reportes
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new MenuPrincipal());
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #region Botones par reportes
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            panelSubMenuReportes.Visible = true;
+            if (panelSubMenuReportes.Visible == true)
+            {
+                panelSubMenuReportes.Visible = false;
+            }
+            else
+            {
+                panelSubMenuReportes.Visible = true;
+            };
         }
         private void btnGraduados_Click(object sender, EventArgs e)
         {
@@ -79,25 +83,56 @@ namespace SchoolDays.UI
         }
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            btnReporte.Visible = false;
+            panelSubMenuReportes.Visible = false;
         }
-
         #endregion
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            AbrirForm(new MenuPrincipal());
+        #region Botones de Alumno
 
-        }
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
+            if (panelAlumnos.Visible == true)
+            {
+                panelAlumnos.Visible = false;
+            }
+            else
+            {
+                panelAlumnos.Visible = true;
+            }
+
+        }
+        private void btnAgrgarAlumnos_Click(object sender, EventArgs e)
+        {
+            panelAlumnos.Visible = false;
             AbrirForm(new Alumnos());
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnListaAlumnos_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            panelAlumnos.Visible = false;
+
+            AbrirForm(new ListaAlumnos());
         }
+
+        private void btnModificarAlumno_Click(object sender, EventArgs e)
+        {
+            panelAlumnos.Visible = false;
+
+            AbrirForm(new Modificar());
+        }
+        #endregion
+
+        #region botones profesor
+
+        private void BtnProfesor_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new Profesor());
+
+        }
+        #endregion
+
+        #endregion
+
         #region Metodo para mostrar en el panel
 
         private void AbrirForm(object formhija)
@@ -116,8 +151,6 @@ namespace SchoolDays.UI
 
         #endregion
 
-        #endregion
-
         #region Metodos para mover pantalla
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -131,14 +164,13 @@ namespace SchoolDays.UI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-
-
-
         #endregion
 
         private void ii(object sender, FormClosedEventArgs e)
         {
 
         }
+
+
     }
 }

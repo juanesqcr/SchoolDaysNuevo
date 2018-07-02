@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SchoolDays.UI.Vistas
 {
-    public partial class Alumnos : Form
+    public partial class Profesor : Form
     {
-        public Alumnos()
+        public Profesor()
         {
             InitializeComponent();
-        }
-
-        private void Alumnos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOtroCorreo_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
