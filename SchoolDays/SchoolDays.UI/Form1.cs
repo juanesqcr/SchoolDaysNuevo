@@ -83,7 +83,7 @@ namespace SchoolDays.UI
         }
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            btnReporte.Visible = false;
+            panelSubMenuReportes.Visible = false;
         }
         #endregion
 
@@ -171,6 +171,6 @@ namespace SchoolDays.UI
 
         }
 
-       
+
     }
 }
