@@ -66,5 +66,15 @@ namespace SchoolDays.UI.Vistas
         {
 
         }
+
+        private void Modificar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGrado_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

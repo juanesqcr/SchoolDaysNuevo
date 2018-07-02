@@ -16,5 +16,10 @@ namespace SchoolDays.UI.Vistas
         {
             InitializeComponent();
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
