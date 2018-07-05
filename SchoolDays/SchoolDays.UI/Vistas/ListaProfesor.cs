@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace SchoolDays.UI.Vistas
 {
-    public partial class Profesor : Form
+    public partial class ListaProfesor : Form
     {
-        public Profesor()
+        public ListaProfesor()
         {
             InitializeComponent();
         }
-
-     
     }
 }

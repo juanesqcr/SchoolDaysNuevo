@@ -35,7 +35,11 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panelMenuVertical = new System.Windows.Forms.Panel();
             this.panelAlumnos = new System.Windows.Forms.Panel();
+            this.btnModificarAlumno = new System.Windows.Forms.Button();
+            this.btnListaAlumnos = new System.Windows.Forms.Button();
+            this.btnAgrgarAlumnos = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panelSubMenuReportes = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -56,10 +60,13 @@
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnAgrgarAlumnos = new System.Windows.Forms.Button();
-            this.btnListaAlumnos = new System.Windows.Forms.Button();
-            this.btnModificarAlumno = new System.Windows.Forms.Button();
+            this.panelProfesor = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.btnAgregarProfe = new System.Windows.Forms.Button();
+            this.btnListaProfesores = new System.Windows.Forms.Button();
+            this.btnModificarProfe = new System.Windows.Forms.Button();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -70,6 +77,7 @@
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).BeginInit();
+            this.panelProfesor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -132,6 +140,7 @@
             // panelMenuVertical
             // 
             this.panelMenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelMenuVertical.Controls.Add(this.panelProfesor);
             this.panelMenuVertical.Controls.Add(this.panelAlumnos);
             this.panelMenuVertical.Controls.Add(this.panelSubMenuReportes);
             this.panelMenuVertical.Controls.Add(this.panel4);
@@ -158,11 +167,61 @@
             this.panelAlumnos.Controls.Add(this.panel11);
             this.panelAlumnos.Controls.Add(this.panel5);
             this.panelAlumnos.Controls.Add(this.panel12);
-            this.panelAlumnos.Location = new System.Drawing.Point(26, 141);
+            this.panelAlumnos.Location = new System.Drawing.Point(25, 141);
             this.panelAlumnos.Name = "panelAlumnos";
             this.panelAlumnos.Size = new System.Drawing.Size(136, 100);
             this.panelAlumnos.TabIndex = 0;
             this.panelAlumnos.Visible = false;
+            // 
+            // btnModificarAlumno
+            // 
+            this.btnModificarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnModificarAlumno.FlatAppearance.BorderSize = 0;
+            this.btnModificarAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnModificarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarAlumno.ForeColor = System.Drawing.Color.White;
+            this.btnModificarAlumno.Location = new System.Drawing.Point(6, 61);
+            this.btnModificarAlumno.Name = "btnModificarAlumno";
+            this.btnModificarAlumno.Size = new System.Drawing.Size(127, 26);
+            this.btnModificarAlumno.TabIndex = 0;
+            this.btnModificarAlumno.Text = "Modificar";
+            this.btnModificarAlumno.UseVisualStyleBackColor = false;
+            this.btnModificarAlumno.Click += new System.EventHandler(this.btnModificarAlumno_Click);
+            // 
+            // btnListaAlumnos
+            // 
+            this.btnListaAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnListaAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListaAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnListaAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnListaAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnListaAlumnos.Location = new System.Drawing.Point(6, 30);
+            this.btnListaAlumnos.Name = "btnListaAlumnos";
+            this.btnListaAlumnos.Size = new System.Drawing.Size(127, 26);
+            this.btnListaAlumnos.TabIndex = 0;
+            this.btnListaAlumnos.Text = "Lista";
+            this.btnListaAlumnos.UseVisualStyleBackColor = false;
+            this.btnListaAlumnos.Click += new System.EventHandler(this.btnListaAlumnos_Click);
+            // 
+            // btnAgrgarAlumnos
+            // 
+            this.btnAgrgarAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAgrgarAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgrgarAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnAgrgarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAgrgarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgrgarAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgrgarAlumnos.ForeColor = System.Drawing.Color.White;
+            this.btnAgrgarAlumnos.Location = new System.Drawing.Point(6, 0);
+            this.btnAgrgarAlumnos.Name = "btnAgrgarAlumnos";
+            this.btnAgrgarAlumnos.Size = new System.Drawing.Size(127, 26);
+            this.btnAgrgarAlumnos.TabIndex = 0;
+            this.btnAgrgarAlumnos.Text = "Agregar Alumno";
+            this.btnAgrgarAlumnos.UseVisualStyleBackColor = false;
+            this.btnAgrgarAlumnos.Click += new System.EventHandler(this.btnAgrgarAlumnos_Click);
             // 
             // panel11
             // 
@@ -172,6 +231,15 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(5, 26);
             this.panel11.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel5.Location = new System.Drawing.Point(0, 61);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(5, 26);
+            this.panel5.TabIndex = 2;
             // 
             // panel12
             // 
@@ -190,7 +258,7 @@
             this.panelSubMenuReportes.Controls.Add(this.btnReporte);
             this.panelSubMenuReportes.Controls.Add(this.panel6);
             this.panelSubMenuReportes.Controls.Add(this.btnGraduados);
-            this.panelSubMenuReportes.Location = new System.Drawing.Point(26, 202);
+            this.panelSubMenuReportes.Location = new System.Drawing.Point(26, 201);
             this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(2);
             this.panelSubMenuReportes.Name = "panelSubMenuReportes";
             this.panelSubMenuReportes.Size = new System.Drawing.Size(139, 96);
@@ -242,7 +310,7 @@
             this.btnReporteEstudianteGrado.FlatAppearance.BorderSize = 0;
             this.btnReporteEstudianteGrado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnReporteEstudianteGrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteEstudianteGrado.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteEstudianteGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporteEstudianteGrado.ForeColor = System.Drawing.Color.White;
             this.btnReporteEstudianteGrado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporteEstudianteGrado.Location = new System.Drawing.Point(2, 33);
@@ -261,7 +329,7 @@
             this.btnReporte.FlatAppearance.BorderSize = 0;
             this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReporte.ForeColor = System.Drawing.Color.White;
             this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporte.Location = new System.Drawing.Point(0, 64);
@@ -289,7 +357,7 @@
             this.btnGraduados.FlatAppearance.BorderSize = 0;
             this.btnGraduados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnGraduados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraduados.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraduados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraduados.ForeColor = System.Drawing.Color.White;
             this.btnGraduados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGraduados.Location = new System.Drawing.Point(2, 2);
@@ -318,7 +386,7 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,7 +415,7 @@
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -376,7 +444,7 @@
             this.btnProfesor.FlatAppearance.BorderSize = 0;
             this.btnProfesor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnProfesor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfesor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfesor.ForeColor = System.Drawing.Color.White;
             this.btnProfesor.Image = ((System.Drawing.Image)(resources.GetObject("btnProfesor.Image")));
             this.btnProfesor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -405,7 +473,7 @@
             this.btnAlumnos.FlatAppearance.BorderSize = 0;
             this.btnAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlumnos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlumnos.ForeColor = System.Drawing.Color.White;
             this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
             this.btnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -443,64 +511,97 @@
             this.panelContenedor.TabIndex = 2;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCentral_Paint);
             // 
-            // panel5
+            // panelProfesor
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(0, 61);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(5, 26);
-            this.panel5.TabIndex = 2;
+            this.panelProfesor.Controls.Add(this.btnModificarProfe);
+            this.panelProfesor.Controls.Add(this.btnListaProfesores);
+            this.panelProfesor.Controls.Add(this.btnAgregarProfe);
+            this.panelProfesor.Controls.Add(this.panel15);
+            this.panelProfesor.Controls.Add(this.panel16);
+            this.panelProfesor.Controls.Add(this.panel14);
+            this.panelProfesor.Location = new System.Drawing.Point(21, 171);
+            this.panelProfesor.Name = "panelProfesor";
+            this.panelProfesor.Size = new System.Drawing.Size(139, 100);
+            this.panelProfesor.TabIndex = 1;
+            this.panelProfesor.Visible = false;
             // 
-            // btnAgrgarAlumnos
+            // panel14
             // 
-            this.btnAgrgarAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnAgrgarAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgrgarAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnAgrgarAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnAgrgarAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgrgarAlumnos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgrgarAlumnos.ForeColor = System.Drawing.Color.White;
-            this.btnAgrgarAlumnos.Location = new System.Drawing.Point(6, 0);
-            this.btnAgrgarAlumnos.Name = "btnAgrgarAlumnos";
-            this.btnAgrgarAlumnos.Size = new System.Drawing.Size(127, 26);
-            this.btnAgrgarAlumnos.TabIndex = 0;
-            this.btnAgrgarAlumnos.Text = "Agregar Alumno";
-            this.btnAgrgarAlumnos.UseVisualStyleBackColor = false;
-            this.btnAgrgarAlumnos.Click += new System.EventHandler(this.btnAgrgarAlumnos_Click);
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel14.Location = new System.Drawing.Point(2, 62);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(5, 26);
+            this.panel14.TabIndex = 3;
             // 
-            // btnListaAlumnos
+            // panel15
             // 
-            this.btnListaAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnListaAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListaAlumnos.FlatAppearance.BorderSize = 0;
-            this.btnListaAlumnos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnListaAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaAlumnos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaAlumnos.ForeColor = System.Drawing.Color.White;
-            this.btnListaAlumnos.Location = new System.Drawing.Point(6, 30);
-            this.btnListaAlumnos.Name = "btnListaAlumnos";
-            this.btnListaAlumnos.Size = new System.Drawing.Size(127, 26);
-            this.btnListaAlumnos.TabIndex = 0;
-            this.btnListaAlumnos.Text = "Lista";
-            this.btnListaAlumnos.UseVisualStyleBackColor = false;
-            this.btnListaAlumnos.Click += new System.EventHandler(this.btnListaAlumnos_Click);
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel15.Location = new System.Drawing.Point(2, 32);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(5, 26);
+            this.panel15.TabIndex = 3;
             // 
-            // btnModificarAlumno
+            // panel16
             // 
-            this.btnModificarAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnModificarAlumno.FlatAppearance.BorderSize = 0;
-            this.btnModificarAlumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnModificarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarAlumno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarAlumno.ForeColor = System.Drawing.Color.White;
-            this.btnModificarAlumno.Location = new System.Drawing.Point(6, 61);
-            this.btnModificarAlumno.Name = "btnModificarAlumno";
-            this.btnModificarAlumno.Size = new System.Drawing.Size(125, 23);
-            this.btnModificarAlumno.TabIndex = 0;
-            this.btnModificarAlumno.Text = "Modificar";
-            this.btnModificarAlumno.UseVisualStyleBackColor = false;
-            this.btnModificarAlumno.Click += new System.EventHandler(this.btnModificarAlumno_Click);
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel16.Location = new System.Drawing.Point(2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(5, 26);
+            this.panel16.TabIndex = 3;
+            // 
+            // btnAgregarProfe
+            // 
+            this.btnAgregarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAgregarProfe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarProfe.FlatAppearance.BorderSize = 0;
+            this.btnAgregarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAgregarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProfe.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProfe.Location = new System.Drawing.Point(7, 2);
+            this.btnAgregarProfe.Name = "btnAgregarProfe";
+            this.btnAgregarProfe.Size = new System.Drawing.Size(126, 26);
+            this.btnAgregarProfe.TabIndex = 2;
+            this.btnAgregarProfe.Text = "Agregar";
+            this.btnAgregarProfe.UseVisualStyleBackColor = false;
+            this.btnAgregarProfe.Click += new System.EventHandler(this.btnAgregarProfe_Click);
+            // 
+            // btnListaProfesores
+            // 
+            this.btnListaProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnListaProfesores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListaProfesores.FlatAppearance.BorderSize = 0;
+            this.btnListaProfesores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnListaProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaProfesores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaProfesores.ForeColor = System.Drawing.Color.White;
+            this.btnListaProfesores.Location = new System.Drawing.Point(6, 32);
+            this.btnListaProfesores.Name = "btnListaProfesores";
+            this.btnListaProfesores.Size = new System.Drawing.Size(126, 26);
+            this.btnListaProfesores.TabIndex = 2;
+            this.btnListaProfesores.Text = "Lista";
+            this.btnListaProfesores.UseVisualStyleBackColor = false;
+            this.btnListaProfesores.Click += new System.EventHandler(this.btnListaProfesores_Click);
+            // 
+            // btnModificarProfe
+            // 
+            this.btnModificarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnModificarProfe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarProfe.FlatAppearance.BorderSize = 0;
+            this.btnModificarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnModificarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarProfe.ForeColor = System.Drawing.Color.White;
+            this.btnModificarProfe.Location = new System.Drawing.Point(7, 62);
+            this.btnModificarProfe.Name = "btnModificarProfe";
+            this.btnModificarProfe.Size = new System.Drawing.Size(126, 26);
+            this.btnModificarProfe.TabIndex = 2;
+            this.btnModificarProfe.Text = "Modificar";
+            this.btnModificarProfe.UseVisualStyleBackColor = false;
+            this.btnModificarProfe.Click += new System.EventHandler(this.btnModificarProfe_Click);
             // 
             // Form1
             // 
@@ -516,7 +617,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ii);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -528,6 +628,7 @@
             this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).EndInit();
+            this.panelProfesor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -565,6 +666,13 @@
         private System.Windows.Forms.Button btnAgrgarAlumnos;
         private System.Windows.Forms.Button btnListaAlumnos;
         private System.Windows.Forms.Button btnModificarAlumno;
+        private System.Windows.Forms.Panel panelProfesor;
+        private System.Windows.Forms.Button btnModificarProfe;
+        private System.Windows.Forms.Button btnListaProfesores;
+        private System.Windows.Forms.Button btnAgregarProfe;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel14;
     }
 }
 

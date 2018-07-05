@@ -65,6 +65,12 @@
     <Compile Include="Vistas\ListaAlumnos.Designer.cs">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\ListaProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ListaProfesor.Designer.cs">
+      <DependentUpon>ListaProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     </Compile>
     <Compile Include="Vistas\Modificar.Designer.cs">
       <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ModificarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ModificarProfesor.Designer.cs">
+      <DependentUpon>ModificarProfesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Profesor.cs">
       <SubType>Form</SubType>
@@ -101,11 +113,17 @@
     <EmbeddedResource Include="Vistas\ListaAlumnos.resx">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ListaProfesor.resx">
+      <DependentUpon>ListaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Modificar.resx">
       <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ModificarProfesor.resx">
+      <DependentUpon>ModificarProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Profesor.resx">
       <DependentUpon>Profesor.cs</DependentUpon>

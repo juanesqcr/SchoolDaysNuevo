@@ -28,7 +28,7 @@ namespace SchoolDays.UI.Vistas
         private void eventoTimer(object ob, EventArgs evt)
         {
             DateTime hoy = DateTime.Now;
-            lblReloj.Text = hoy.ToString("hh:mm:ss zzz");
+            lblReloj.Text = hoy.ToString("hh:mm tt" );
             lblFecha.Text = hoy.ToString("dd-MMMM-yy");
         }
 

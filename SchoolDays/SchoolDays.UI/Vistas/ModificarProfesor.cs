@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace SchoolDays.UI.Vistas
 {
-    public partial class Alumnos : Form
+    public partial class ModificarProfesor : Form
     {
-        public Alumnos()
+        public ModificarProfesor()
         {
             InitializeComponent();
         }
 
-        private void Alumnos_Load(object sender, EventArgs e)
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtOtroCorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void txtCelular_ValueChanged(object sender, EventArgs e)
         {
 
         }

@@ -49,6 +49,8 @@ namespace SchoolDays.UI
 
         #region Metodos Menu Vertical
 
+        #region otros
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             AbrirForm(new MenuPrincipal());
@@ -60,18 +62,25 @@ namespace SchoolDays.UI
             Application.Exit();
         }
 
-        #region Botones par reportes
+        #endregion
+
+        #region Botones para reportes
+
         private void btnReportes_Click(object sender, EventArgs e)
         {
             if (panelSubMenuReportes.Visible == true)
             {
                 panelSubMenuReportes.Visible = false;
             }
-            else
+            else if (panelProfesor.Visible == true || panelSubMenuReportes.Visible == false || panelAlumnos.Visible == true)
             {
+                panelProfesor.Visible = false;
                 panelSubMenuReportes.Visible = true;
-            };
+                panelAlumnos.Visible = false;
+            }
+
         }
+
         private void btnGraduados_Click(object sender, EventArgs e)
         {
             panelSubMenuReportes.Visible = false;
@@ -95,11 +104,12 @@ namespace SchoolDays.UI
             {
                 panelAlumnos.Visible = false;
             }
-            else
+            else if (panelProfesor.Visible == true || panelSubMenuReportes.Visible == true || panelAlumnos.Visible == false)
             {
+                panelProfesor.Visible = false;
+                panelSubMenuReportes.Visible = false;
                 panelAlumnos.Visible = true;
             }
-
         }
         private void btnAgrgarAlumnos_Click(object sender, EventArgs e)
         {
@@ -126,7 +136,35 @@ namespace SchoolDays.UI
 
         private void BtnProfesor_Click(object sender, EventArgs e)
         {
+            if (panelProfesor.Visible == true)
+            {
+                panelProfesor.Visible = false;
+            }
+            else if (panelProfesor.Visible == false || panelSubMenuReportes.Visible == true || panelAlumnos.Visible == true)
+            {
+                panelProfesor.Visible = true;
+                panelSubMenuReportes.Visible = false;
+                panelAlumnos.Visible = false;
+            }
+
+        }
+
+        private void btnAgregarProfe_Click(object sender, EventArgs e)
+        {
+            panelProfesor.Visible = false;
             AbrirForm(new Profesor());
+        }
+
+        private void btnListaProfesores_Click(object sender, EventArgs e)
+        {
+            panelProfesor.Visible = false;
+            AbrirForm(new ListaProfesor());
+        }
+
+        private void btnModificarProfe_Click(object sender, EventArgs e)
+        {
+            panelProfesor.Visible = false;
+            AbrirForm(new ModificarProfesor());
 
         }
         #endregion
@@ -166,11 +204,8 @@ namespace SchoolDays.UI
 
         #endregion
 
-        private void ii(object sender, FormClosedEventArgs e)
-        {
+       
 
-        }
-
-
+      
     }
 }
