@@ -33,7 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -140,6 +143,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolDays.BL\SchoolDays.BL.csproj">
+      <Project>{ee20b30e-241c-4e56-a7f1-9839d4ff3336}</Project>
+      <Name>SchoolDays.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolDays.DATA\SchoolDays.DAL%28DATA%29.csproj">
+      <Project>{948EF59E-107D-4BBC-AEFB-2A7101D7626E}</Project>
+      <Name>SchoolDays.DAL%28DATA%29</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

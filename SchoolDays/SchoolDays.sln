@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDays.UI", "SchoolDays.UI\SchoolDays.UI.csproj", "{3EAEFEF6-B654-41C7-971F-B17EDFD29B1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDays.DAL", "SchoolDays.DATA\SchoolDays.DAL.csproj", "{948EF59E-107D-4BBC-AEFB-2A7101D7626E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDays.DAL(DATA)", "SchoolDays.DATA\SchoolDays.DAL(DATA).csproj", "{948EF59E-107D-4BBC-AEFB-2A7101D7626E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDays.BL", "SchoolDays.BL\SchoolDays.BL.csproj", "{EE20B30E-241C-4E56-A7F1-9839D4FF3336}"
 EndProject

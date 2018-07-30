@@ -36,6 +36,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             this.dgvListaAlumnos.Name = "dgvListaAlumnos";
             this.dgvListaAlumnos.Size = new System.Drawing.Size(785, 374);
             this.dgvListaAlumnos.TabIndex = 0;
+            this.dgvListaAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaAlumnos_CellContentClick);
             // 
             // label1
             // 
@@ -121,12 +123,23 @@
             this.btnRefresh.Text = "Refrescar";
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Location = new System.Drawing.Point(643, 469);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(75, 23);
+            this.btnMostrar.TabIndex = 7;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            // 
             // ListaAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(810, 500);
+            this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.numericUpDown1);
@@ -155,5 +168,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }

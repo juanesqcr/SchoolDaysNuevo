@@ -1,0 +1,12 @@
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\obj\Debug\SchoolDays.BL.csprojAssemblyReference.cache
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\obj\Debug\SchoolDays.BL.csproj.CoreCompileInputs.cache
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\bin\Debug\SchoolDays.BL.dll
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\bin\Debug\SchoolDays.BL.pdb
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\bin\Debug\SchoolDays.DATA.dll
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\bin\Debug\EntityFramework.dll
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\bin\Debug\SchoolDays.DATA.pdb
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\bin\Debug\SchoolDays.DATA.dll.config
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\bin\Debug\EntityFramework.xml
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\obj\Debug\SchoolDays.BL.csproj.CopyComplete
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\obj\Debug\SchoolDays.BL.dll
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.BL\obj\Debug\SchoolDays.BL.pdb
