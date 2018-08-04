@@ -12,7 +12,7 @@ namespace SchoolDays.DATA
     using System;
     using System.Collections.Generic;
     
-    public partial class Notas
+    public partial class Nota
     {
         public int ID_Nota { get; set; }
         public int PrimerParcial { get; set; }
@@ -26,7 +26,7 @@ namespace SchoolDays.DATA
         public Nullable<int> ID_Estudiante { get; set; }
     
         public virtual Estudiante Estudiante { get; set; }
-        public virtual Grados Grados { get; set; }
+        public virtual Grado Grado { get; set; }
         public virtual Materia Materia { get; set; }
         public virtual Profesor Profesor { get; set; }
     }

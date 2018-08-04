@@ -17,8 +17,8 @@ namespace SchoolDays.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Estudiante()
         {
-            this.Mensualidad = new HashSet<Mensualidad>();
-            this.Notas = new HashSet<Notas>();
+            this.Mensualidads = new HashSet<Mensualidad>();
+            this.Notas = new HashSet<Nota>();
         }
     
         public int Cedula { get; set; }
@@ -34,10 +34,10 @@ namespace SchoolDays.DATA
         public string Otros { get; set; }
         public Nullable<int> ID_Grado { get; set; }
     
-        public virtual Grados Grados { get; set; }
+        public virtual Grado Grado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Mensualidad> Mensualidad { get; set; }
+        public virtual ICollection<Mensualidad> Mensualidads { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Notas> Notas { get; set; }
+        public virtual ICollection<Nota> Notas { get; set; }
     }
 }

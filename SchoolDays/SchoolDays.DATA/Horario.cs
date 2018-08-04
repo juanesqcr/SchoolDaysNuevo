@@ -17,7 +17,7 @@ namespace SchoolDays.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Horario()
         {
-            this.Profesor = new HashSet<Profesor>();
+            this.Profesors = new HashSet<Profesor>();
         }
     
         public int ID_Horario { get; set; }
@@ -25,6 +25,6 @@ namespace SchoolDays.DATA
         public string Turno { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Profesor> Profesor { get; set; }
+        public virtual ICollection<Profesor> Profesors { get; set; }
     }
 }

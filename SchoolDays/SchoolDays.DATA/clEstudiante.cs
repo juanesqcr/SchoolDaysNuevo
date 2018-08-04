@@ -52,8 +52,8 @@ namespace SchoolDays.DATA
             List<Estudiante> listaEstudiante = new List<Estudiante>();
             try
             {
-                SchoolDaysEntities1 entities = new SchoolDaysEntities1();
-                listaEstudiante = entities.Estudiante.ToList();
+                SchoolDaysEntities2 entities = new SchoolDaysEntities2();
+                listaEstudiante = entities.Estudiantes.ToList();
                 entities.SaveChanges();
                 return listaEstudiante;
             }

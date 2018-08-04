@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="SchoolDaysModelStoreContainer" CdmEntityContainer="SchoolDaysEntities">
-    <EntitySetMapping Name="Estudiante">
+  <EntityContainerMapping StorageEntityContainer="SchoolDaysModelStoreContainer" CdmEntityContainer="SchoolDaysEntities2">
+    <EntitySetMapping Name="Estudiantes">
       <EntityTypeMapping TypeName="SchoolDaysModel.Estudiante">
         <MappingFragment StoreEntitySet="Estudiante">
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
@@ -15,20 +15,19 @@
           <ScalarProperty Name="Correo" ColumnName="Correo" />
           <ScalarProperty Name="CorreoOtro" ColumnName="CorreoOtro" />
           <ScalarProperty Name="Otros" ColumnName="Otros" />
-          <ScalarProperty Name="ID_Nota" ColumnName="ID_Nota" />
+          <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Grados">
-      <EntityTypeMapping TypeName="SchoolDaysModel.Grados">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Grado">
         <MappingFragment StoreEntitySet="Grados">
           <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
-          <ScalarProperty Name="Grado" ColumnName="Grado" />
-          <ScalarProperty Name="ID_Estudiante" ColumnName="ID_Estudiante" />
+          <ScalarProperty Name="Grado1" ColumnName="Grado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Horario">
+    <EntitySetMapping Name="Horarios">
       <EntityTypeMapping TypeName="SchoolDaysModel.Horario">
         <MappingFragment StoreEntitySet="Horario">
           <ScalarProperty Name="ID_Horario" ColumnName="ID_Horario" />
@@ -37,7 +36,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Materia">
+    <EntitySetMapping Name="Materias">
       <EntityTypeMapping TypeName="SchoolDaysModel.Materia">
         <MappingFragment StoreEntitySet="Materia">
           <ScalarProperty Name="ID_Materia" ColumnName="ID_Materia" />
@@ -45,7 +44,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Mensualidad">
+    <EntitySetMapping Name="Mensualidads">
       <EntityTypeMapping TypeName="SchoolDaysModel.Mensualidad">
         <MappingFragment StoreEntitySet="Mensualidad">
           <ScalarProperty Name="ID_Mensualidad" ColumnName="ID_Mensualidad" />
@@ -56,7 +55,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Notas">
-      <EntityTypeMapping TypeName="SchoolDaysModel.Notas">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Nota">
         <MappingFragment StoreEntitySet="Notas">
           <ScalarProperty Name="ID_Nota" ColumnName="ID_Nota" />
           <ScalarProperty Name="PrimerParcial" ColumnName="PrimerParcial" />
@@ -67,10 +66,11 @@
           <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
           <ScalarProperty Name="ID_Profesor" ColumnName="ID_Profesor" />
           <ScalarProperty Name="ID_Materia" ColumnName="ID_Materia" />
+          <ScalarProperty Name="ID_Estudiante" ColumnName="ID_Estudiante" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Profesor">
+    <EntitySetMapping Name="Profesors">
       <EntityTypeMapping TypeName="SchoolDaysModel.Profesor">
         <MappingFragment StoreEntitySet="Profesor">
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
@@ -87,7 +87,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Salario">
+    <EntitySetMapping Name="Salarios">
       <EntityTypeMapping TypeName="SchoolDaysModel.Salario">
         <MappingFragment StoreEntitySet="Salario">
           <ScalarProperty Name="ID_Salario" ColumnName="ID_Salario" />
@@ -97,7 +97,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="SchoolDaysModel.sysdiagrams">
+      <EntityTypeMapping TypeName="SchoolDaysModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
