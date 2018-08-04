@@ -14,24 +14,18 @@ namespace SchoolDays.DATA
     
     public partial class Notas
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Notas()
-        {
-            this.Estudiante = new HashSet<Estudiante>();
-        }
-    
         public int ID_Nota { get; set; }
         public int PrimerParcial { get; set; }
         public int SegundoParcial { get; set; }
         public int TercerParcial { get; set; }
         public int Tareas { get; set; }
         public int TrabajoCotidiano { get; set; }
-        public int ID_Grado { get; set; }
-        public int ID_Profesor { get; set; }
-        public int ID_Materia { get; set; }
+        public Nullable<int> ID_Grado { get; set; }
+        public Nullable<int> ID_Profesor { get; set; }
+        public Nullable<int> ID_Materia { get; set; }
+        public Nullable<int> ID_Estudiante { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Estudiante> Estudiante { get; set; }
+        public virtual Estudiante Estudiante { get; set; }
         public virtual Grados Grados { get; set; }
         public virtual Materia Materia { get; set; }
         public virtual Profesor Profesor { get; set; }

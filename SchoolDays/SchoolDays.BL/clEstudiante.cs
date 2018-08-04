@@ -25,6 +25,13 @@ namespace SchoolDays.BL
                 }
                 return Instancia;
             }
+            set
+            {
+                if (Instancia == null)
+                {
+                    Instancia = value;
+                }
+            }
         }
 
         #endregion
@@ -58,7 +65,7 @@ namespace SchoolDays.BL
                 return listaEstudiante;
 
             }
-            catch (Exception)
+            catch (Exception ee)
             {
 
                 throw;

@@ -27,10 +27,10 @@ namespace SchoolDays.DATA
         public int Celular { get; set; }
         public string Correo { get; set; }
         public string DireccionHogar { get; set; }
-        public int ID_Materia { get; set; }
-        public int ID_Salario { get; set; }
-        public int ID_Horario { get; set; }
-        public int ID_Grado { get; set; }
+        public Nullable<int> ID_Materia { get; set; }
+        public Nullable<int> ID_Salario { get; set; }
+        public Nullable<int> ID_Horario { get; set; }
+        public Nullable<int> ID_Grado { get; set; }
     
         public virtual Grados Grados { get; set; }
         public virtual Horario Horario { get; set; }

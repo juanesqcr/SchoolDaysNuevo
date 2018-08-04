@@ -39,8 +39,9 @@ namespace SchoolDays.UI.Vistas
 
         private void CargarGrid()
         {
-            var query = (from a in SchoolDays.BL.clEstudiante._Instancia.ListaEstudiantes().AsReadOnly()
-                         select new {a.Cedula, a.Nombre, a.Apellido, a.Nombre_Papa,a.Numero_Papa,a.Nombre_Mama,a.Numero_Mama}
+            var query = (from a in SchoolDays.BL.clEstudiante._Instancia.ListaEstudiantes().AsEnumerable()
+                         select new {a.Cedula, a.Nombre, a.Apellido,
+                             a.Nombre_Papa,a.Numero_Papa,a.Nombre_Mama,a.Numero_Mama}
                         ).ToList();
             //dgvData.DataSource = Fidelitas.BS.clFerreteria._Instancia.Get();
             dgvListaAlumnos.DataSource = query;

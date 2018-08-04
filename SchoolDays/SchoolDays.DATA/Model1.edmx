@@ -20,7 +20,7 @@
           <Property Name="Correo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="CorreoOtro" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Otros" Type="varchar" MaxLength="200" />
-          <Property Name="ID_Nota" Type="int" Nullable="false" />
+          <Property Name="ID_Grado" Type="int" />
         </EntityType>
         <EntityType Name="Grados">
           <Key>
@@ -28,7 +28,6 @@
           </Key>
           <Property Name="ID_Grado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Grado" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ID_Estudiante" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Horario">
           <Key>
@@ -64,9 +63,10 @@
           <Property Name="TercerParcial" Type="int" Nullable="false" />
           <Property Name="Tareas" Type="int" Nullable="false" />
           <Property Name="TrabajoCotidiano" Type="int" Nullable="false" />
-          <Property Name="ID_Grado" Type="int" Nullable="false" />
-          <Property Name="ID_Profesor" Type="int" Nullable="false" />
-          <Property Name="ID_Materia" Type="int" Nullable="false" />
+          <Property Name="ID_Grado" Type="int" />
+          <Property Name="ID_Profesor" Type="int" />
+          <Property Name="ID_Materia" Type="int" />
+          <Property Name="ID_Estudiante" Type="int" />
         </EntityType>
         <EntityType Name="Profesor">
           <Key>
@@ -79,10 +79,10 @@
           <Property Name="Celular" Type="int" Nullable="false" />
           <Property Name="Correo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="DireccionHogar" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="ID_Materia" Type="int" Nullable="false" />
-          <Property Name="ID_Salario" Type="int" Nullable="false" />
-          <Property Name="ID_Horario" Type="int" Nullable="false" />
-          <Property Name="ID_Grado" Type="int" Nullable="false" />
+          <Property Name="ID_Materia" Type="int" />
+          <Property Name="ID_Salario" Type="int" />
+          <Property Name="ID_Horario" Type="int" />
+          <Property Name="ID_Grado" Type="int" />
         </EntityType>
         <EntityType Name="Salario">
           <Key>
@@ -102,27 +102,15 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
-        <Association Name="FK_Estudiante_Notas">
-          <End Role="Notas" Type="Self.Notas" Multiplicity="1" />
+        <Association Name="FK_Estudiante_Grados">
+          <End Role="Grados" Type="Self.Grados" Multiplicity="0..1" />
           <End Role="Estudiante" Type="Self.Estudiante" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Notas">
-              <PropertyRef Name="ID_Nota" />
+            <Principal Role="Grados">
+              <PropertyRef Name="ID_Grado" />
             </Principal>
             <Dependent Role="Estudiante">
-              <PropertyRef Name="ID_Nota" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Grados_Estudiante">
-          <End Role="Estudiante" Type="Self.Estudiante" Multiplicity="1" />
-          <End Role="Grados" Type="Self.Grados" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Estudiante">
-              <PropertyRef Name="Cedula" />
-            </Principal>
-            <Dependent Role="Grados">
-              <PropertyRef Name="ID_Estudiante" />
+              <PropertyRef Name="ID_Grado" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -138,8 +126,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Notas_Estudiante">
+          <End Role="Estudiante" Type="Self.Estudiante" Multiplicity="0..1" />
+          <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estudiante">
+              <PropertyRef Name="Cedula" />
+            </Principal>
+            <Dependent Role="Notas">
+              <PropertyRef Name="ID_Estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Notas_Grados">
-          <End Role="Grados" Type="Self.Grados" Multiplicity="1" />
+          <End Role="Grados" Type="Self.Grados" Multiplicity="0..1" />
           <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grados">
@@ -151,7 +151,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Notas_Materia">
-          <End Role="Materia" Type="Self.Materia" Multiplicity="1" />
+          <End Role="Materia" Type="Self.Materia" Multiplicity="0..1" />
           <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Materia">
@@ -163,7 +163,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Notas_Profesor">
-          <End Role="Profesor" Type="Self.Profesor" Multiplicity="1" />
+          <End Role="Profesor" Type="Self.Profesor" Multiplicity="0..1" />
           <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Profesor">
@@ -175,7 +175,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Grados">
-          <End Role="Grados" Type="Self.Grados" Multiplicity="1" />
+          <End Role="Grados" Type="Self.Grados" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grados">
@@ -187,7 +187,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Horario">
-          <End Role="Horario" Type="Self.Horario" Multiplicity="1" />
+          <End Role="Horario" Type="Self.Horario" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Horario">
@@ -199,7 +199,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Materia">
-          <End Role="Materia" Type="Self.Materia" Multiplicity="1" />
+          <End Role="Materia" Type="Self.Materia" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Materia">
@@ -211,7 +211,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Profesor">
-          <End Role="Salario" Type="Self.Salario" Multiplicity="1" />
+          <End Role="Salario" Type="Self.Salario" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Salario">
@@ -232,17 +232,17 @@
           <EntitySet Name="Profesor" EntityType="Self.Profesor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Salario" EntityType="Self.Salario" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Estudiante_Notas" Association="Self.FK_Estudiante_Notas">
-            <End Role="Notas" EntitySet="Notas" />
-            <End Role="Estudiante" EntitySet="Estudiante" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Grados_Estudiante" Association="Self.FK_Grados_Estudiante">
-            <End Role="Estudiante" EntitySet="Estudiante" />
+          <AssociationSet Name="FK_Estudiante_Grados" Association="Self.FK_Estudiante_Grados">
             <End Role="Grados" EntitySet="Grados" />
+            <End Role="Estudiante" EntitySet="Estudiante" />
           </AssociationSet>
           <AssociationSet Name="FK_Mensualidad_Estudiante" Association="Self.FK_Mensualidad_Estudiante">
             <End Role="Estudiante" EntitySet="Estudiante" />
             <End Role="Mensualidad" EntitySet="Mensualidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notas_Estudiante" Association="Self.FK_Notas_Estudiante">
+            <End Role="Estudiante" EntitySet="Estudiante" />
+            <End Role="Notas" EntitySet="Notas" />
           </AssociationSet>
           <AssociationSet Name="FK_Notas_Grados" Association="Self.FK_Notas_Grados">
             <End Role="Grados" EntitySet="Grados" />
@@ -293,10 +293,10 @@
           <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CorreoOtro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Otros" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="ID_Nota" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Notas" Relationship="Self.FK_Estudiante_Notas" FromRole="Estudiante" ToRole="Notas" />
-          <NavigationProperty Name="Grados" Relationship="Self.FK_Grados_Estudiante" FromRole="Estudiante" ToRole="Grados" />
+          <Property Name="ID_Grado" Type="Int32" />
+          <NavigationProperty Name="Grados" Relationship="Self.FK_Estudiante_Grados" FromRole="Estudiante" ToRole="Grados" />
           <NavigationProperty Name="Mensualidad" Relationship="Self.FK_Mensualidad_Estudiante" FromRole="Estudiante" ToRole="Mensualidad" />
+          <NavigationProperty Name="Notas" Relationship="Self.FK_Notas_Estudiante" FromRole="Estudiante" ToRole="Notas" />
         </EntityType>
         <EntityType Name="Grados">
           <Key>
@@ -304,8 +304,7 @@
           </Key>
           <Property Name="ID_Grado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Grado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ID_Estudiante" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Estudiante" Relationship="Self.FK_Grados_Estudiante" FromRole="Grados" ToRole="Estudiante" />
+          <NavigationProperty Name="Estudiante" Relationship="Self.FK_Estudiante_Grados" FromRole="Grados" ToRole="Estudiante" />
           <NavigationProperty Name="Notas" Relationship="Self.FK_Notas_Grados" FromRole="Grados" ToRole="Notas" />
           <NavigationProperty Name="Profesor" Relationship="Self.FK_Profesor_Grados" FromRole="Grados" ToRole="Profesor" />
         </EntityType>
@@ -347,10 +346,11 @@
           <Property Name="TercerParcial" Type="Int32" Nullable="false" />
           <Property Name="Tareas" Type="Int32" Nullable="false" />
           <Property Name="TrabajoCotidiano" Type="Int32" Nullable="false" />
-          <Property Name="ID_Grado" Type="Int32" Nullable="false" />
-          <Property Name="ID_Profesor" Type="Int32" Nullable="false" />
-          <Property Name="ID_Materia" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Estudiante" Relationship="Self.FK_Estudiante_Notas" FromRole="Notas" ToRole="Estudiante" />
+          <Property Name="ID_Grado" Type="Int32" />
+          <Property Name="ID_Profesor" Type="Int32" />
+          <Property Name="ID_Materia" Type="Int32" />
+          <Property Name="ID_Estudiante" Type="Int32" />
+          <NavigationProperty Name="Estudiante" Relationship="Self.FK_Notas_Estudiante" FromRole="Notas" ToRole="Estudiante" />
           <NavigationProperty Name="Grados" Relationship="Self.FK_Notas_Grados" FromRole="Notas" ToRole="Grados" />
           <NavigationProperty Name="Materia" Relationship="Self.FK_Notas_Materia" FromRole="Notas" ToRole="Materia" />
           <NavigationProperty Name="Profesor" Relationship="Self.FK_Notas_Profesor" FromRole="Notas" ToRole="Profesor" />
@@ -366,10 +366,10 @@
           <Property Name="Celular" Type="Int32" Nullable="false" />
           <Property Name="Correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DireccionHogar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ID_Materia" Type="Int32" Nullable="false" />
-          <Property Name="ID_Salario" Type="Int32" Nullable="false" />
-          <Property Name="ID_Horario" Type="Int32" Nullable="false" />
-          <Property Name="ID_Grado" Type="Int32" Nullable="false" />
+          <Property Name="ID_Materia" Type="Int32" />
+          <Property Name="ID_Salario" Type="Int32" />
+          <Property Name="ID_Horario" Type="Int32" />
+          <Property Name="ID_Grado" Type="Int32" />
           <NavigationProperty Name="Grados" Relationship="Self.FK_Profesor_Grados" FromRole="Profesor" ToRole="Grados" />
           <NavigationProperty Name="Horario" Relationship="Self.FK_Profesor_Horario" FromRole="Profesor" ToRole="Horario" />
           <NavigationProperty Name="Materia" Relationship="Self.FK_Profesor_Materia" FromRole="Profesor" ToRole="Materia" />
@@ -395,27 +395,15 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <Association Name="FK_Estudiante_Notas">
-          <End Role="Notas" Type="Self.Notas" Multiplicity="1" />
+        <Association Name="FK_Estudiante_Grados">
+          <End Role="Grados" Type="Self.Grados" Multiplicity="0..1" />
           <End Role="Estudiante" Type="Self.Estudiante" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Notas">
-              <PropertyRef Name="ID_Nota" />
+            <Principal Role="Grados">
+              <PropertyRef Name="ID_Grado" />
             </Principal>
             <Dependent Role="Estudiante">
-              <PropertyRef Name="ID_Nota" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Grados_Estudiante">
-          <End Role="Estudiante" Type="Self.Estudiante" Multiplicity="1" />
-          <End Role="Grados" Type="Self.Grados" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Estudiante">
-              <PropertyRef Name="Cedula" />
-            </Principal>
-            <Dependent Role="Grados">
-              <PropertyRef Name="ID_Estudiante" />
+              <PropertyRef Name="ID_Grado" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -431,8 +419,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Notas_Estudiante">
+          <End Role="Estudiante" Type="Self.Estudiante" Multiplicity="0..1" />
+          <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estudiante">
+              <PropertyRef Name="Cedula" />
+            </Principal>
+            <Dependent Role="Notas">
+              <PropertyRef Name="ID_Estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Notas_Grados">
-          <End Role="Grados" Type="Self.Grados" Multiplicity="1" />
+          <End Role="Grados" Type="Self.Grados" Multiplicity="0..1" />
           <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grados">
@@ -444,7 +444,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Grados">
-          <End Role="Grados" Type="Self.Grados" Multiplicity="1" />
+          <End Role="Grados" Type="Self.Grados" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Grados">
@@ -456,7 +456,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Horario">
-          <End Role="Horario" Type="Self.Horario" Multiplicity="1" />
+          <End Role="Horario" Type="Self.Horario" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Horario">
@@ -468,7 +468,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Notas_Materia">
-          <End Role="Materia" Type="Self.Materia" Multiplicity="1" />
+          <End Role="Materia" Type="Self.Materia" Multiplicity="0..1" />
           <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Materia">
@@ -480,7 +480,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Materia">
-          <End Role="Materia" Type="Self.Materia" Multiplicity="1" />
+          <End Role="Materia" Type="Self.Materia" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Materia">
@@ -492,7 +492,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Notas_Profesor">
-          <End Role="Profesor" Type="Self.Profesor" Multiplicity="1" />
+          <End Role="Profesor" Type="Self.Profesor" Multiplicity="0..1" />
           <End Role="Notas" Type="Self.Notas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Profesor">
@@ -504,7 +504,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Profesor_Profesor">
-          <End Role="Salario" Type="Self.Salario" Multiplicity="1" />
+          <End Role="Salario" Type="Self.Salario" Multiplicity="0..1" />
           <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Salario">
@@ -515,7 +515,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="SchoolDaysEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SchoolDaysEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Estudiante" EntityType="Self.Estudiante" />
           <EntitySet Name="Grados" EntityType="Self.Grados" />
           <EntitySet Name="Horario" EntityType="Self.Horario" />
@@ -525,17 +525,17 @@
           <EntitySet Name="Profesor" EntityType="Self.Profesor" />
           <EntitySet Name="Salario" EntityType="Self.Salario" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <AssociationSet Name="FK_Estudiante_Notas" Association="Self.FK_Estudiante_Notas">
-            <End Role="Notas" EntitySet="Notas" />
-            <End Role="Estudiante" EntitySet="Estudiante" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Grados_Estudiante" Association="Self.FK_Grados_Estudiante">
-            <End Role="Estudiante" EntitySet="Estudiante" />
+          <AssociationSet Name="FK_Estudiante_Grados" Association="Self.FK_Estudiante_Grados">
             <End Role="Grados" EntitySet="Grados" />
+            <End Role="Estudiante" EntitySet="Estudiante" />
           </AssociationSet>
           <AssociationSet Name="FK_Mensualidad_Estudiante" Association="Self.FK_Mensualidad_Estudiante">
             <End Role="Estudiante" EntitySet="Estudiante" />
             <End Role="Mensualidad" EntitySet="Mensualidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Notas_Estudiante" Association="Self.FK_Notas_Estudiante">
+            <End Role="Estudiante" EntitySet="Estudiante" />
+            <End Role="Notas" EntitySet="Notas" />
           </AssociationSet>
           <AssociationSet Name="FK_Notas_Grados" Association="Self.FK_Notas_Grados">
             <End Role="Grados" EntitySet="Grados" />
@@ -571,7 +571,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SchoolDaysModelStoreContainer" CdmEntityContainer="SchoolDaysEntities">
+        <EntityContainerMapping StorageEntityContainer="SchoolDaysModelStoreContainer" CdmEntityContainer="SchoolDaysEntities1">
           <EntitySetMapping Name="Estudiante">
             <EntityTypeMapping TypeName="SchoolDaysModel.Estudiante">
               <MappingFragment StoreEntitySet="Estudiante">
@@ -586,7 +586,7 @@
                 <ScalarProperty Name="Correo" ColumnName="Correo" />
                 <ScalarProperty Name="CorreoOtro" ColumnName="CorreoOtro" />
                 <ScalarProperty Name="Otros" ColumnName="Otros" />
-                <ScalarProperty Name="ID_Nota" ColumnName="ID_Nota" />
+                <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -595,7 +595,6 @@
               <MappingFragment StoreEntitySet="Grados">
                 <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
                 <ScalarProperty Name="Grado" ColumnName="Grado" />
-                <ScalarProperty Name="ID_Estudiante" ColumnName="ID_Estudiante" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -638,6 +637,7 @@
                 <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
                 <ScalarProperty Name="ID_Profesor" ColumnName="ID_Profesor" />
                 <ScalarProperty Name="ID_Materia" ColumnName="ID_Materia" />
+                <ScalarProperty Name="ID_Estudiante" ColumnName="ID_Estudiante" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

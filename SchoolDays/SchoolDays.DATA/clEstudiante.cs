@@ -23,6 +23,13 @@ namespace SchoolDays.DATA
                 }
                 return Instancia;
             }
+            set
+            {
+                if (Instancia == null)
+                {
+                    Instancia = value;
+                }
+            }
         }
 
         public void Actualizar(Estudiante estudiante)
@@ -45,12 +52,12 @@ namespace SchoolDays.DATA
             List<Estudiante> listaEstudiante = new List<Estudiante>();
             try
             {
-                SchoolDaysEntities entities = new SchoolDaysEntities();
+                SchoolDaysEntities1 entities = new SchoolDaysEntities1();
                 listaEstudiante = entities.Estudiante.ToList();
                 entities.SaveChanges();
                 return listaEstudiante;
             }
-            catch (Exception)
+            catch (Exception ee)
             {
 
                 throw;

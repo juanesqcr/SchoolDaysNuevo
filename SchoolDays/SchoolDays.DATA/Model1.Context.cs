@@ -13,10 +13,10 @@ namespace SchoolDays.DATA
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SchoolDaysEntities : DbContext
+    public partial class SchoolDaysEntities1 : DbContext
     {
-        public SchoolDaysEntities()
-            : base("name=SchoolDaysEntities")
+        public SchoolDaysEntities1()
+            : base("name=SchoolDaysEntities1")
         {
         }
     

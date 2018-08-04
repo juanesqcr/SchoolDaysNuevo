@@ -17,15 +17,16 @@ namespace SchoolDays.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Grados()
         {
+            this.Estudiante = new HashSet<Estudiante>();
             this.Notas = new HashSet<Notas>();
             this.Profesor = new HashSet<Profesor>();
         }
     
         public int ID_Grado { get; set; }
         public string Grado { get; set; }
-        public int ID_Estudiante { get; set; }
     
-        public virtual Estudiante Estudiante { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Estudiante> Estudiante { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Notas> Notas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
