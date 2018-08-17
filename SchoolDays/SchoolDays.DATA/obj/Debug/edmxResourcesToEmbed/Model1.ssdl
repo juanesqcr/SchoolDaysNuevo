@@ -30,7 +30,7 @@
     </Key>
     <Property Name="ID_Horario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Turno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Turno" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Materia">
     <Key>

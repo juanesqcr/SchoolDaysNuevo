@@ -13,10 +13,10 @@ namespace SchoolDays.DATA
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SchoolDaysEntities2 : DbContext
+    public partial class SchoolDaysEntities : DbContext
     {
-        public SchoolDaysEntities2()
-            : base("name=SchoolDaysEntities2")
+        public SchoolDaysEntities()
+            : base("name=SchoolDaysEntities")
         {
         }
     
@@ -25,14 +25,14 @@ namespace SchoolDays.DATA
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Estudiante> Estudiantes { get; set; }
-        public virtual DbSet<Grado> Grados { get; set; }
-        public virtual DbSet<Horario> Horarios { get; set; }
-        public virtual DbSet<Materia> Materias { get; set; }
-        public virtual DbSet<Mensualidad> Mensualidads { get; set; }
-        public virtual DbSet<Nota> Notas { get; set; }
-        public virtual DbSet<Profesor> Profesors { get; set; }
-        public virtual DbSet<Salario> Salarios { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Estudiante> Estudiante { get; set; }
+        public virtual DbSet<Grados> Grados { get; set; }
+        public virtual DbSet<Horario> Horario { get; set; }
+        public virtual DbSet<Materia> Materia { get; set; }
+        public virtual DbSet<Mensualidad> Mensualidad { get; set; }
+        public virtual DbSet<Notas> Notas { get; set; }
+        public virtual DbSet<Profesor> Profesor { get; set; }
+        public virtual DbSet<Salario> Salario { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

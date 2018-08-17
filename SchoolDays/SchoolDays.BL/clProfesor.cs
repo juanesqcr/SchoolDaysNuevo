@@ -6,22 +6,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 
-
 namespace SchoolDays.BL
 {
-    public class clEstudiante : IEstudiante<Estudiante>
+
+    public class clProfesor : IProfesor<Profesor>
     {
         #region Singelton  
 
-        private static clEstudiante Instancia;
+        private static clProfesor Instancia;
 
-        public static clEstudiante _Instancia
+        public static clProfesor _Instancia
         {
             get
             {
                 if (Instancia == null)
                 {
-                    return new clEstudiante();
+                    return new clProfesor();
                 }
                 return Instancia;
             }
@@ -36,29 +36,13 @@ namespace SchoolDays.BL
 
         #endregion
 
-        public void Actualizar(Estudiante estudiante)
+        public void Actualizar(Profesor profesor)
         {
             try
             {
                 using (TransactionScope scope = new TransactionScope())
                 {
-                    SchoolDays.DATA.ClEstudiante._Instancia.Actualizar(estudiante);
-                    scope.Complete();
-                }
-            }
-            catch (Exception ee)
-            {
-                
-            }
-        }
-
-        public void Eliminar(Estudiante estudiante)
-        {
-            try
-            {
-                using(TransactionScope scope = new TransactionScope())
-                {
-                    DATA.ClEstudiante._Instancia.Eliminar(estudiante);
+                    DATA.clProfesor._Instancia.Actualizar(profesor);
                     scope.Complete();
                 }
             }
@@ -69,34 +53,36 @@ namespace SchoolDays.BL
             }
         }
 
-        public void Insertar(Estudiante estudiante)
+        public void Eliminar(Profesor profesor)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insertar(Profesor profesor)
         {
             try
             {
                 using (TransactionScope scope = new TransactionScope())
                 {
-                    DATA.ClEstudiante._Instancia.Insertar(estudiante);
+                    DATA.clProfesor._Instancia.Insertar(profesor);
                     scope.Complete();
                 }
             }
             catch (Exception)
             {
 
-                throw;
             }
-
-
         }
 
-        public List<Estudiante> ListaEstudiantes()
+        public List<Profesor> ListaProfesor()
         {
-            List<Estudiante> listaEstudiante = new List<Estudiante>();
+            List<Profesor> listaEstudiante = new List<Profesor>();
 
             try
             {
                 using (TransactionScope scope = new TransactionScope())
                 {
-                    listaEstudiante = SchoolDays.DATA.ClEstudiante._Instancia.ListaEstudiantes();
+                    listaEstudiante = DATA.clProfesor._Instancia.ListaProfesor();
                     scope.Complete();
                 }
                 return listaEstudiante;

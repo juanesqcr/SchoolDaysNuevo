@@ -9,7 +9,6 @@ D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DAL(DA
 D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DAL(DATA).csproj.CopyComplete
 D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DATA.dll
 D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DATA.pdb
-D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DAL(DATA).csprojAssemblyReference.cache
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays.DATA\bin\Debug\SchoolDays.DATA.dll.config
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays.DATA\bin\Debug\SchoolDays.DATA.dll
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays.DATA\bin\Debug\SchoolDays.DATA.pdb
@@ -21,3 +20,4 @@ C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DAL(DATA).csproj.CopyComplete
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DATA.dll
 C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DATA.pdb
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.DATA\obj\Debug\SchoolDays.DAL(DATA).csprojAssemblyReference.cache

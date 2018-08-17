@@ -12,24 +12,24 @@ namespace SchoolDays.DATA
     using System;
     using System.Collections.Generic;
     
-    public partial class Grado
+    public partial class Grados
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Grado()
+        public Grados()
         {
-            this.Estudiantes = new HashSet<Estudiante>();
-            this.Notas = new HashSet<Nota>();
-            this.Profesors = new HashSet<Profesor>();
+            this.Estudiante = new HashSet<Estudiante>();
+            this.Notas = new HashSet<Notas>();
+            this.Profesor = new HashSet<Profesor>();
         }
     
         public int ID_Grado { get; set; }
-        public string Grado1 { get; set; }
+        public string Grado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Estudiante> Estudiantes { get; set; }
+        public virtual ICollection<Estudiante> Estudiante { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Nota> Notas { get; set; }
+        public virtual ICollection<Notas> Notas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Profesor> Profesors { get; set; }
+        public virtual ICollection<Profesor> Profesor { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="SchoolDaysModelStoreContainer" CdmEntityContainer="SchoolDaysEntities1">
+  <EntityContainerMapping StorageEntityContainer="SchoolDaysModelStoreContainer" CdmEntityContainer="SchoolDaysEntities">
     <EntitySetMapping Name="Estudiante">
       <EntityTypeMapping TypeName="SchoolDaysModel.Estudiante">
         <MappingFragment StoreEntitySet="Estudiante">
@@ -32,7 +32,6 @@
         <MappingFragment StoreEntitySet="Horario">
           <ScalarProperty Name="ID_Horario" ColumnName="ID_Horario" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Turno" ColumnName="Turno" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

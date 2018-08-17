@@ -13,7 +13,7 @@ namespace SchoolDays.DATA
         List<Estudiante> ListaEstudiantes();
 
         void Eliminar(Estudiante estudiante);
-
+        
         void Actualizar(Estudiante estudiante);
     }
 }

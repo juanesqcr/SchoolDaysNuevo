@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clEstudiante.cs" />
+    <Compile Include="clProfesor.cs" />
     <Compile Include="IEstudiante.cs" />
+    <Compile Include="IProfesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

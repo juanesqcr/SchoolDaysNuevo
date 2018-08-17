@@ -1,23 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SchoolDays.DATA
 {
-    public class ClEstudiante : IEstudiante<Estudiante>
+    public class clProfesor : IProfesor<Profesor>
     {
 
         #region Singelton  
 
-        private static ClEstudiante Instancia;
+        private static clProfesor Instancia;
 
-        public static ClEstudiante _Instancia
+        public static clProfesor _Instancia
         {
             get
             {
                 if (Instancia == null)
                 {
-                    return new ClEstudiante();
+                    return new clProfesor();
                 }
                 return Instancia;
             }
@@ -32,17 +34,15 @@ namespace SchoolDays.DATA
 
         #endregion
 
-        
+        #region CRUD
 
-        #region Metodos CRUD
-
-        public void Actualizar(Estudiante estudiante)
+        public void Actualizar(Profesor profesor)
         {
             try
             {
                 using (SchoolDaysEntities entities = new SchoolDaysEntities())
                 {
-                    entities.Entry(estudiante).State = System.Data.Entity.EntityState.Modified;
+                    entities.Entry(profesor).State = System.Data.Entity.EntityState.Modified;
                     entities.SaveChanges();
                 }
             }
@@ -53,21 +53,20 @@ namespace SchoolDays.DATA
             }
         }
 
-
-        public void Eliminar(Estudiante estudiante)
+        public void Eliminar(Profesor profesor)
         {
             SchoolDaysEntities entities = new SchoolDaysEntities();
-            var resultado = entities.Estudiante.Find(estudiante.Cedula);
-            entities.Estudiante.Remove(resultado);
+            var resultado = entities.Profesor.Find(profesor.Cedula);
+            entities.Profesor.Remove(resultado);
             entities.SaveChanges();
         }
 
-        public void Insertar(Estudiante estudiante)
+        public void Insertar(Profesor profesor)
         {
             try
             {
                 SchoolDaysEntities entities = new SchoolDaysEntities();
-                entities.Estudiante.Add(estudiante);
+                entities.Profesor.Add(profesor);
                 entities.SaveChanges();
             }
             catch (Exception ee)
@@ -77,15 +76,15 @@ namespace SchoolDays.DATA
             }
         }
 
-        public List<Estudiante> ListaEstudiantes()
+        public List<Profesor> ListaProfesor()
         {
-            List<Estudiante> listaEstudiante = new List<Estudiante>();
+            List<Profesor> ListaProfesor = new List<Profesor>();
             try
             {
                 SchoolDaysEntities entities = new SchoolDaysEntities();
-                listaEstudiante = entities.Estudiante.ToList();
+                ListaProfesor = entities.Profesor.ToList();
                 entities.SaveChanges();
-                return listaEstudiante;
+                return ListaProfesor;
             }
             catch (Exception ee)
             {
@@ -94,10 +93,8 @@ namespace SchoolDays.DATA
                 throw;
             }
         }
-
 
         #endregion
-
 
     }
 }

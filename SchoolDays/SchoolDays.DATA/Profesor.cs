@@ -17,7 +17,7 @@ namespace SchoolDays.DATA
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Profesor()
         {
-            this.Notas = new HashSet<Nota>();
+            this.Notas = new HashSet<Notas>();
         }
     
         public int Cedula { get; set; }
@@ -32,11 +32,11 @@ namespace SchoolDays.DATA
         public Nullable<int> ID_Horario { get; set; }
         public Nullable<int> ID_Grado { get; set; }
     
-        public virtual Grado Grado { get; set; }
+        public virtual Grados Grados { get; set; }
         public virtual Horario Horario { get; set; }
         public virtual Materia Materia { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Nota> Notas { get; set; }
+        public virtual ICollection<Notas> Notas { get; set; }
         public virtual Salario Salario { get; set; }
     }
 }

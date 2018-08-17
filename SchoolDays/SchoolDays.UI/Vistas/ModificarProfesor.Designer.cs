@@ -34,30 +34,26 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
-            this.txtCelular = new System.Windows.Forms.NumericUpDown();
-            this.txtSalario = new System.Windows.Forms.NumericUpDown();
             this.txtNumeroCelular = new System.Windows.Forms.NumericUpDown();
             this.txtNumeroHogar = new System.Windows.Forms.NumericUpDown();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtHorario = new System.Windows.Forms.TextBox();
-            this.txtMateria = new System.Windows.Forms.TextBox();
             this.txtDireccionHogar = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtMateria = new System.Windows.Forms.ComboBox();
+            this.txtSalario = new System.Windows.Forms.ComboBox();
+            this.txtHorario = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCelular)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroCelular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroHogar)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +77,7 @@
             this.btnBuscar.TabIndex = 49;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtCedula
             // 
@@ -121,41 +118,16 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(681, 443);
+            this.btnModificar.Location = new System.Drawing.Point(641, 391);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(84, 26);
             this.btnModificar.TabIndex = 70;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Enabled = false;
-            this.txtCelular.Location = new System.Drawing.Point(200, 304);
-            this.txtCelular.Maximum = new decimal(new int[] {
-            1215752192,
-            23,
-            0,
-            0});
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(186, 20);
-            this.txtCelular.TabIndex = 93;
-            this.txtCelular.ValueChanged += new System.EventHandler(this.txtCelular_ValueChanged);
-            // 
-            // txtSalario
-            // 
-            this.txtSalario.Enabled = false;
-            this.txtSalario.Location = new System.Drawing.Point(539, 185);
-            this.txtSalario.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(186, 20);
-            this.txtSalario.TabIndex = 92;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtNumeroCelular
             // 
@@ -191,26 +163,10 @@
             this.txtCorreo.Size = new System.Drawing.Size(186, 20);
             this.txtCorreo.TabIndex = 88;
             // 
-            // txtHorario
-            // 
-            this.txtHorario.Enabled = false;
-            this.txtHorario.Location = new System.Drawing.Point(539, 224);
-            this.txtHorario.Name = "txtHorario";
-            this.txtHorario.Size = new System.Drawing.Size(186, 20);
-            this.txtHorario.TabIndex = 87;
-            // 
-            // txtMateria
-            // 
-            this.txtMateria.Enabled = false;
-            this.txtMateria.Location = new System.Drawing.Point(539, 146);
-            this.txtMateria.Name = "txtMateria";
-            this.txtMateria.Size = new System.Drawing.Size(186, 20);
-            this.txtMateria.TabIndex = 86;
-            // 
             // txtDireccionHogar
             // 
             this.txtDireccionHogar.Enabled = false;
-            this.txtDireccionHogar.Location = new System.Drawing.Point(199, 343);
+            this.txtDireccionHogar.Location = new System.Drawing.Point(199, 295);
             this.txtDireccionHogar.Multiline = true;
             this.txtDireccionHogar.Name = "txtDireccionHogar";
             this.txtDireccionHogar.Size = new System.Drawing.Size(526, 51);
@@ -229,7 +185,7 @@
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(199, 149);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(186, 20);
+            this.txtNombre.Size = new System.Drawing.Size(187, 20);
             this.txtNombre.TabIndex = 84;
             // 
             // label4
@@ -239,7 +195,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(55, 225);
+            this.label4.Location = new System.Drawing.Point(60, 225);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 16);
             this.label4.TabIndex = 82;
@@ -252,7 +208,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(400, 266);
+            this.label6.Location = new System.Drawing.Point(408, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 16);
             this.label6.TabIndex = 81;
@@ -265,25 +221,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(52, 346);
+            this.label7.Location = new System.Drawing.Point(52, 295);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 16);
             this.label7.TabIndex = 80;
             this.label7.Text = "Direccion del Hogar:";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(136, 304);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 16);
-            this.label12.TabIndex = 78;
-            this.label12.Text = "Celular:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label5
             // 
@@ -292,7 +234,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(136, 258);
+            this.label5.Location = new System.Drawing.Point(135, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 77;
@@ -357,26 +299,61 @@
             this.label13.TabIndex = 73;
             this.label13.Text = "Materia:";
             // 
+            // txtMateria
+            // 
+            this.txtMateria.FormattingEnabled = true;
+            this.txtMateria.Items.AddRange(new object[] {
+            "Matematicas",
+            "Sociales",
+            "Español",
+            "Ciencias"});
+            this.txtMateria.Location = new System.Drawing.Point(539, 147);
+            this.txtMateria.Name = "txtMateria";
+            this.txtMateria.Size = new System.Drawing.Size(186, 21);
+            this.txtMateria.TabIndex = 93;
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.FormattingEnabled = true;
+            this.txtSalario.Items.AddRange(new object[] {
+            "Profesor nuevo",
+            "Profesor con experiencia",
+            "Profesor Experto"});
+            this.txtSalario.Location = new System.Drawing.Point(539, 185);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(185, 21);
+            this.txtSalario.TabIndex = 94;
+            // 
+            // txtHorario
+            // 
+            this.txtHorario.FormattingEnabled = true;
+            this.txtHorario.Items.AddRange(new object[] {
+            "Mañana",
+            "Tarde ",
+            "Turno Completo"});
+            this.txtHorario.Location = new System.Drawing.Point(539, 222);
+            this.txtHorario.Name = "txtHorario";
+            this.txtHorario.Size = new System.Drawing.Size(186, 21);
+            this.txtHorario.TabIndex = 95;
+            // 
             // ModificarProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(810, 500);
-            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtHorario);
             this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.txtMateria);
             this.Controls.Add(this.txtNumeroCelular);
             this.Controls.Add(this.txtNumeroHogar);
             this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtHorario);
-            this.Controls.Add(this.txtMateria);
             this.Controls.Add(this.txtDireccionHogar);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label8);
@@ -392,8 +369,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCelular)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroCelular)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroHogar)).EndInit();
             this.ResumeLayout(false);
@@ -408,25 +383,23 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.NumericUpDown txtCelular;
-        private System.Windows.Forms.NumericUpDown txtSalario;
         private System.Windows.Forms.NumericUpDown txtNumeroCelular;
         private System.Windows.Forms.NumericUpDown txtNumeroHogar;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtHorario;
-        private System.Windows.Forms.TextBox txtMateria;
         private System.Windows.Forms.TextBox txtDireccionHogar;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox txtMateria;
+        private System.Windows.Forms.ComboBox txtSalario;
+        private System.Windows.Forms.ComboBox txtHorario;
     }
 }

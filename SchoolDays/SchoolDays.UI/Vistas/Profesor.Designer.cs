@@ -41,18 +41,17 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtDireccionHogar = new System.Windows.Forms.TextBox();
-            this.txtMateria = new System.Windows.Forms.TextBox();
-            this.txtHorario = new System.Windows.Forms.TextBox();
             this.txtNumeroHogar = new System.Windows.Forms.NumericUpDown();
             this.txtNumeroCelular = new System.Windows.Forms.NumericUpDown();
-            this.txtSalario = new System.Windows.Forms.NumericUpDown();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.NumericUpDown();
+            this.txtSalario = new System.Windows.Forms.ComboBox();
+            this.txtHorario = new System.Windows.Forms.ComboBox();
+            this.txtMateria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroHogar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroCelular)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula)).BeginInit();
             this.SuspendLayout();
             // 
@@ -201,20 +200,6 @@
             this.txtDireccionHogar.Size = new System.Drawing.Size(526, 51);
             this.txtDireccionHogar.TabIndex = 2;
             // 
-            // txtMateria
-            // 
-            this.txtMateria.Location = new System.Drawing.Point(529, 94);
-            this.txtMateria.Name = "txtMateria";
-            this.txtMateria.Size = new System.Drawing.Size(186, 20);
-            this.txtMateria.TabIndex = 2;
-            // 
-            // txtHorario
-            // 
-            this.txtHorario.Location = new System.Drawing.Point(529, 172);
-            this.txtHorario.Name = "txtHorario";
-            this.txtHorario.Size = new System.Drawing.Size(186, 20);
-            this.txtHorario.TabIndex = 2;
-            // 
             // txtNumeroHogar
             // 
             this.txtNumeroHogar.Location = new System.Drawing.Point(189, 215);
@@ -239,18 +224,6 @@
             this.txtNumeroCelular.Size = new System.Drawing.Size(186, 20);
             this.txtNumeroCelular.TabIndex = 3;
             // 
-            // txtSalario
-            // 
-            this.txtSalario.Location = new System.Drawing.Point(529, 133);
-            this.txtSalario.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(186, 20);
-            this.txtSalario.TabIndex = 3;
-            // 
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(529, 211);
@@ -266,6 +239,7 @@
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label11
             // 
@@ -292,20 +266,57 @@
             this.txtCedula.Size = new System.Drawing.Size(186, 20);
             this.txtCedula.TabIndex = 7;
             // 
+            // txtSalario
+            // 
+            this.txtSalario.FormattingEnabled = true;
+            this.txtSalario.Items.AddRange(new object[] {
+            "Profesor nuevo",
+            "Profesor con experiencia",
+            "Profesor Experto"});
+            this.txtSalario.Location = new System.Drawing.Point(529, 136);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(186, 21);
+            this.txtSalario.TabIndex = 8;
+            // 
+            // txtHorario
+            // 
+            this.txtHorario.FormattingEnabled = true;
+            this.txtHorario.Items.AddRange(new object[] {
+            "Mañana",
+            "Tarde ",
+            "Turno Completo"});
+            this.txtHorario.Location = new System.Drawing.Point(529, 173);
+            this.txtHorario.Name = "txtHorario";
+            this.txtHorario.Size = new System.Drawing.Size(186, 21);
+            this.txtHorario.TabIndex = 9;
+            // 
+            // txtMateria
+            // 
+            this.txtMateria.FormattingEnabled = true;
+            this.txtMateria.Items.AddRange(new object[] {
+            "Matematicas",
+            "Sociales",
+            "Español",
+            "Ciencias"});
+            this.txtMateria.Location = new System.Drawing.Point(529, 97);
+            this.txtMateria.Name = "txtMateria";
+            this.txtMateria.Size = new System.Drawing.Size(186, 21);
+            this.txtMateria.TabIndex = 10;
+            // 
             // Profesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtMateria);
+            this.Controls.Add(this.txtHorario);
+            this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.txtNumeroCelular);
             this.Controls.Add(this.txtNumeroHogar);
             this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtHorario);
-            this.Controls.Add(this.txtMateria);
             this.Controls.Add(this.txtDireccionHogar);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
@@ -325,7 +336,6 @@
             this.Text = "Profesor";
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroHogar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroCelular)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSalario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -347,14 +357,14 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtDireccionHogar;
-        private System.Windows.Forms.TextBox txtMateria;
-        private System.Windows.Forms.TextBox txtHorario;
         private System.Windows.Forms.NumericUpDown txtNumeroHogar;
         private System.Windows.Forms.NumericUpDown txtNumeroCelular;
-        private System.Windows.Forms.NumericUpDown txtSalario;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown txtCedula;
+        private System.Windows.Forms.ComboBox txtSalario;
+        private System.Windows.Forms.ComboBox txtHorario;
+        private System.Windows.Forms.ComboBox txtMateria;
     }
 }

@@ -38,15 +38,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtNombreEstudiante = new System.Windows.Forms.TextBox();
             this.txtOtroCorreo = new System.Windows.Forms.TextBox();
-            this.txtOtro = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtApellidoAlumno = new System.Windows.Forms.TextBox();
             this.txtDireccionHogar = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtGrado = new System.Windows.Forms.NumericUpDown();
             this.txtNumeroPapa = new System.Windows.Forms.NumericUpDown();
             this.txtNumeroHogar = new System.Windows.Forms.NumericUpDown();
             this.txtNumeroMama = new System.Windows.Forms.NumericUpDown();
@@ -57,7 +54,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtNombrePapa = new System.Windows.Forms.TextBox();
             this.txtNombreMama = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGrado)).BeginInit();
+            this.txtGrado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroPapa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroHogar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroMama)).BeginInit();
@@ -166,24 +163,12 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(11, 290);
+            this.label9.Location = new System.Drawing.Point(9, 325);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(137, 17);
             this.label9.TabIndex = 8;
             this.label9.Text = "Direccion del Hogar:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(503, 321);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Otros:";
             // 
             // txtNombreEstudiante
             // 
@@ -201,15 +186,6 @@
             this.txtOtroCorreo.Size = new System.Drawing.Size(216, 20);
             this.txtOtroCorreo.TabIndex = 11;
             this.txtOtroCorreo.TextChanged += new System.EventHandler(this.txtOtroCorreo_TextChanged);
-            // 
-            // txtOtro
-            // 
-            this.txtOtro.Location = new System.Drawing.Point(559, 322);
-            this.txtOtro.Margin = new System.Windows.Forms.Padding(2);
-            this.txtOtro.Multiline = true;
-            this.txtOtro.Name = "txtOtro";
-            this.txtOtro.Size = new System.Drawing.Size(216, 81);
-            this.txtOtro.TabIndex = 12;
             // 
             // txtCorreo
             // 
@@ -229,11 +205,11 @@
             // 
             // txtDireccionHogar
             // 
-            this.txtDireccionHogar.Location = new System.Drawing.Point(162, 288);
+            this.txtDireccionHogar.Location = new System.Drawing.Point(160, 323);
             this.txtDireccionHogar.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccionHogar.Multiline = true;
             this.txtDireccionHogar.Name = "txtDireccionHogar";
-            this.txtDireccionHogar.Size = new System.Drawing.Size(210, 80);
+            this.txtDireccionHogar.Size = new System.Drawing.Size(613, 80);
             this.txtDireccionHogar.TabIndex = 16;
             // 
             // label12
@@ -248,23 +224,9 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "Numero del Papá:";
             // 
-            // txtGrado
-            // 
-            this.txtGrado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtGrado.Location = new System.Drawing.Point(162, 214);
-            this.txtGrado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtGrado.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.txtGrado.Name = "txtGrado";
-            this.txtGrado.Size = new System.Drawing.Size(209, 16);
-            this.txtGrado.TabIndex = 19;
-            // 
             // txtNumeroPapa
             // 
-            this.txtNumeroPapa.Location = new System.Drawing.Point(561, 136);
+            this.txtNumeroPapa.Location = new System.Drawing.Point(559, 136);
             this.txtNumeroPapa.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumeroPapa.Maximum = new decimal(new int[] {
             100000000,
@@ -272,7 +234,7 @@
             0,
             0});
             this.txtNumeroPapa.Name = "txtNumeroPapa";
-            this.txtNumeroPapa.Size = new System.Drawing.Size(209, 20);
+            this.txtNumeroPapa.Size = new System.Drawing.Size(216, 20);
             this.txtNumeroPapa.TabIndex = 20;
             // 
             // txtNumeroHogar
@@ -290,7 +252,7 @@
             // 
             // txtNumeroMama
             // 
-            this.txtNumeroMama.Location = new System.Drawing.Point(561, 175);
+            this.txtNumeroMama.Location = new System.Drawing.Point(559, 175);
             this.txtNumeroMama.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumeroMama.Maximum = new decimal(new int[] {
             100000000,
@@ -298,7 +260,7 @@
             0,
             0});
             this.txtNumeroMama.Name = "txtNumeroMama";
-            this.txtNumeroMama.Size = new System.Drawing.Size(209, 20);
+            this.txtNumeroMama.Size = new System.Drawing.Size(216, 20);
             this.txtNumeroMama.TabIndex = 23;
             // 
             // btnAgregar
@@ -327,14 +289,14 @@
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(160, 175);
+            this.txtCedula.Location = new System.Drawing.Point(162, 175);
             this.txtCedula.Maximum = new decimal(new int[] {
             1316134912,
             2328,
             0,
             0});
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(211, 20);
+            this.txtCedula.Size = new System.Drawing.Size(209, 20);
             this.txtCedula.TabIndex = 25;
             // 
             // label13
@@ -372,8 +334,23 @@
             // 
             this.txtNombreMama.Location = new System.Drawing.Point(559, 210);
             this.txtNombreMama.Name = "txtNombreMama";
-            this.txtNombreMama.Size = new System.Drawing.Size(214, 20);
+            this.txtNombreMama.Size = new System.Drawing.Size(216, 20);
             this.txtNombreMama.TabIndex = 26;
+            // 
+            // txtGrado
+            // 
+            this.txtGrado.FormattingEnabled = true;
+            this.txtGrado.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.txtGrado.Location = new System.Drawing.Point(162, 216);
+            this.txtGrado.Name = "txtGrado";
+            this.txtGrado.Size = new System.Drawing.Size(209, 21);
+            this.txtGrado.TabIndex = 27;
             // 
             // Alumnos
             // 
@@ -381,6 +358,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(810, 500);
+            this.Controls.Add(this.txtGrado);
             this.Controls.Add(this.txtNombreMama);
             this.Controls.Add(this.txtNombrePapa);
             this.Controls.Add(this.txtCedula);
@@ -388,15 +366,12 @@
             this.Controls.Add(this.txtNumeroMama);
             this.Controls.Add(this.txtNumeroHogar);
             this.Controls.Add(this.txtNumeroPapa);
-            this.Controls.Add(this.txtGrado);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtDireccionHogar);
             this.Controls.Add(this.txtApellidoAlumno);
             this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtOtro);
             this.Controls.Add(this.txtOtroCorreo);
             this.Controls.Add(this.txtNombreEstudiante);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label11);
@@ -415,7 +390,6 @@
             this.Name = "Alumnos";
             this.Text = "Alumnos";
             this.Load += new System.EventHandler(this.Alumnos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtGrado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroPapa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroHogar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroMama)).EndInit();
@@ -436,15 +410,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNombreEstudiante;
         private System.Windows.Forms.TextBox txtOtroCorreo;
-        private System.Windows.Forms.TextBox txtOtro;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtApellidoAlumno;
         private System.Windows.Forms.TextBox txtDireccionHogar;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown txtGrado;
         private System.Windows.Forms.NumericUpDown txtNumeroPapa;
         private System.Windows.Forms.NumericUpDown txtNumeroHogar;
         private System.Windows.Forms.NumericUpDown txtNumeroMama;
@@ -455,5 +426,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNombrePapa;
         private System.Windows.Forms.TextBox txtNombreMama;
+        private System.Windows.Forms.ComboBox txtGrado;
     }
 }
