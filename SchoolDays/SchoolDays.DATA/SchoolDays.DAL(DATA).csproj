@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clEstudiante.cs" />
+    <Compile Include="clGrado.cs" />
+    <Compile Include="clMateria.cs" />
+    <Compile Include="clNota.cs" />
     <Compile Include="clProfesor.cs" />
     <Compile Include="Estudiante.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -61,6 +64,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="IEstudiante.cs" />
+    <Compile Include="IGrado.cs" />
+    <Compile Include="IMateria.cs" />
+    <Compile Include="INota.cs" />
     <Compile Include="IProfesor.cs" />
     <Compile Include="Materia.cs">
       <DependentUpon>Model1.tt</DependentUpon>

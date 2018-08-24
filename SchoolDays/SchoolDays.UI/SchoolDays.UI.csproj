@@ -99,6 +99,12 @@
     <Compile Include="Vistas\ModificarProfesor.Designer.cs">
       <DependentUpon>ModificarProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Notas.Designer.cs">
+      <DependentUpon>Notas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Profesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\ModificarProfesor.resx">
       <DependentUpon>ModificarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Profesor.resx">
       <DependentUpon>Profesor.cs</DependentUpon>

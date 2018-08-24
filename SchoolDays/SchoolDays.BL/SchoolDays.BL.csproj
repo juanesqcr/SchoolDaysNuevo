@@ -42,8 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clEstudiante.cs" />
+    <Compile Include="clGrado.cs" />
+    <Compile Include="clMateria.cs" />
+    <Compile Include="clNota.cs" />
     <Compile Include="clProfesor.cs" />
     <Compile Include="IEstudiante.cs" />
+    <Compile Include="IGrado.cs" />
+    <Compile Include="IMateria.cs" />
+    <Compile Include="INota.cs" />
     <Compile Include="IProfesor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

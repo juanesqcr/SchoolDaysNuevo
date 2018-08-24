@@ -84,6 +84,7 @@ namespace SchoolDays.UI
         private void btnGraduados_Click(object sender, EventArgs e)
         {
             panelSubMenuReportes.Visible = false;
+            AbrirForm(new Notas());
         }
 
         private void btnReporteEstudianteGrado_Click(object sender, EventArgs e)

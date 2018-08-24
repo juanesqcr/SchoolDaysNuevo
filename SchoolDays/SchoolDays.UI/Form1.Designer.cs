@@ -46,10 +46,17 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnReporteEstudianteGrado = new System.Windows.Forms.Button();
+            this.btnMostrarNotas = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnGraduados = new System.Windows.Forms.Button();
+            this.btnAsignarNotas = new System.Windows.Forms.Button();
+            this.panelProfesor = new System.Windows.Forms.Panel();
+            this.btnModificarProfe = new System.Windows.Forms.Button();
+            this.btnListaProfesores = new System.Windows.Forms.Button();
+            this.btnAgregarProfe = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -60,13 +67,6 @@
             this.btnAlumnos = new System.Windows.Forms.Button();
             this.btnPrincipal = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panelProfesor = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.btnAgregarProfe = new System.Windows.Forms.Button();
-            this.btnListaProfesores = new System.Windows.Forms.Button();
-            this.btnModificarProfe = new System.Windows.Forms.Button();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -76,8 +76,8 @@
             this.panelSubMenuReportes.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).BeginInit();
             this.panelProfesor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSuperior
@@ -140,9 +140,9 @@
             // panelMenuVertical
             // 
             this.panelMenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelMenuVertical.Controls.Add(this.panelProfesor);
-            this.panelMenuVertical.Controls.Add(this.panelAlumnos);
             this.panelMenuVertical.Controls.Add(this.panelSubMenuReportes);
+            this.panelMenuVertical.Controls.Add(this.panelAlumnos);
+            this.panelMenuVertical.Controls.Add(this.panelProfesor);
             this.panelMenuVertical.Controls.Add(this.panel4);
             this.panelMenuVertical.Controls.Add(this.btnSalir);
             this.panelMenuVertical.Controls.Add(this.panel3);
@@ -167,7 +167,7 @@
             this.panelAlumnos.Controls.Add(this.panel11);
             this.panelAlumnos.Controls.Add(this.panel5);
             this.panelAlumnos.Controls.Add(this.panel12);
-            this.panelAlumnos.Location = new System.Drawing.Point(25, 141);
+            this.panelAlumnos.Location = new System.Drawing.Point(26, 129);
             this.panelAlumnos.Name = "panelAlumnos";
             this.panelAlumnos.Size = new System.Drawing.Size(136, 100);
             this.panelAlumnos.TabIndex = 0;
@@ -254,11 +254,11 @@
             // 
             this.panelSubMenuReportes.Controls.Add(this.panel9);
             this.panelSubMenuReportes.Controls.Add(this.panel7);
-            this.panelSubMenuReportes.Controls.Add(this.btnReporteEstudianteGrado);
+            this.panelSubMenuReportes.Controls.Add(this.btnMostrarNotas);
             this.panelSubMenuReportes.Controls.Add(this.btnReporte);
             this.panelSubMenuReportes.Controls.Add(this.panel6);
-            this.panelSubMenuReportes.Controls.Add(this.btnGraduados);
-            this.panelSubMenuReportes.Location = new System.Drawing.Point(26, 201);
+            this.panelSubMenuReportes.Controls.Add(this.btnAsignarNotas);
+            this.panelSubMenuReportes.Location = new System.Drawing.Point(22, 201);
             this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(2);
             this.panelSubMenuReportes.Name = "panelSubMenuReportes";
             this.panelSubMenuReportes.Size = new System.Drawing.Size(139, 96);
@@ -303,24 +303,24 @@
             this.panel8.Size = new System.Drawing.Size(4, 26);
             this.panel8.TabIndex = 13;
             // 
-            // btnReporteEstudianteGrado
+            // btnMostrarNotas
             // 
-            this.btnReporteEstudianteGrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnReporteEstudianteGrado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReporteEstudianteGrado.FlatAppearance.BorderSize = 0;
-            this.btnReporteEstudianteGrado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnReporteEstudianteGrado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporteEstudianteGrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporteEstudianteGrado.ForeColor = System.Drawing.Color.White;
-            this.btnReporteEstudianteGrado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporteEstudianteGrado.Location = new System.Drawing.Point(2, 33);
-            this.btnReporteEstudianteGrado.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReporteEstudianteGrado.Name = "btnReporteEstudianteGrado";
-            this.btnReporteEstudianteGrado.Size = new System.Drawing.Size(132, 26);
-            this.btnReporteEstudianteGrado.TabIndex = 14;
-            this.btnReporteEstudianteGrado.Text = "Grados";
-            this.btnReporteEstudianteGrado.UseVisualStyleBackColor = false;
-            this.btnReporteEstudianteGrado.Click += new System.EventHandler(this.btnReporteEstudianteGrado_Click);
+            this.btnMostrarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnMostrarNotas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarNotas.FlatAppearance.BorderSize = 0;
+            this.btnMostrarNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnMostrarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarNotas.ForeColor = System.Drawing.Color.White;
+            this.btnMostrarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMostrarNotas.Location = new System.Drawing.Point(2, 33);
+            this.btnMostrarNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMostrarNotas.Name = "btnMostrarNotas";
+            this.btnMostrarNotas.Size = new System.Drawing.Size(132, 26);
+            this.btnMostrarNotas.TabIndex = 14;
+            this.btnMostrarNotas.Text = "Ver notas";
+            this.btnMostrarNotas.UseVisualStyleBackColor = false;
+            this.btnMostrarNotas.Click += new System.EventHandler(this.btnReporteEstudianteGrado_Click);
             // 
             // btnReporte
             // 
@@ -350,24 +350,116 @@
             this.panel6.Size = new System.Drawing.Size(4, 26);
             this.panel6.TabIndex = 9;
             // 
-            // btnGraduados
+            // btnAsignarNotas
             // 
-            this.btnGraduados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnGraduados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGraduados.FlatAppearance.BorderSize = 0;
-            this.btnGraduados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnGraduados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGraduados.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGraduados.ForeColor = System.Drawing.Color.White;
-            this.btnGraduados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGraduados.Location = new System.Drawing.Point(2, 2);
-            this.btnGraduados.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGraduados.Name = "btnGraduados";
-            this.btnGraduados.Size = new System.Drawing.Size(132, 26);
-            this.btnGraduados.TabIndex = 10;
-            this.btnGraduados.Text = "Graduados";
-            this.btnGraduados.UseVisualStyleBackColor = false;
-            this.btnGraduados.Click += new System.EventHandler(this.btnGraduados_Click);
+            this.btnAsignarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAsignarNotas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsignarNotas.FlatAppearance.BorderSize = 0;
+            this.btnAsignarNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAsignarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsignarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarNotas.ForeColor = System.Drawing.Color.White;
+            this.btnAsignarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsignarNotas.Location = new System.Drawing.Point(2, 2);
+            this.btnAsignarNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAsignarNotas.Name = "btnAsignarNotas";
+            this.btnAsignarNotas.Size = new System.Drawing.Size(132, 26);
+            this.btnAsignarNotas.TabIndex = 10;
+            this.btnAsignarNotas.Text = "Asignar Notas";
+            this.btnAsignarNotas.UseVisualStyleBackColor = false;
+            this.btnAsignarNotas.Click += new System.EventHandler(this.btnGraduados_Click);
+            // 
+            // panelProfesor
+            // 
+            this.panelProfesor.Controls.Add(this.btnModificarProfe);
+            this.panelProfesor.Controls.Add(this.btnListaProfesores);
+            this.panelProfesor.Controls.Add(this.btnAgregarProfe);
+            this.panelProfesor.Controls.Add(this.panel15);
+            this.panelProfesor.Controls.Add(this.panel16);
+            this.panelProfesor.Controls.Add(this.panel14);
+            this.panelProfesor.Location = new System.Drawing.Point(26, 160);
+            this.panelProfesor.Name = "panelProfesor";
+            this.panelProfesor.Size = new System.Drawing.Size(139, 100);
+            this.panelProfesor.TabIndex = 1;
+            this.panelProfesor.Visible = false;
+            // 
+            // btnModificarProfe
+            // 
+            this.btnModificarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnModificarProfe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarProfe.FlatAppearance.BorderSize = 0;
+            this.btnModificarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnModificarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarProfe.ForeColor = System.Drawing.Color.White;
+            this.btnModificarProfe.Location = new System.Drawing.Point(7, 62);
+            this.btnModificarProfe.Name = "btnModificarProfe";
+            this.btnModificarProfe.Size = new System.Drawing.Size(126, 26);
+            this.btnModificarProfe.TabIndex = 2;
+            this.btnModificarProfe.Text = "Modificar";
+            this.btnModificarProfe.UseVisualStyleBackColor = false;
+            this.btnModificarProfe.Click += new System.EventHandler(this.btnModificarProfe_Click);
+            // 
+            // btnListaProfesores
+            // 
+            this.btnListaProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnListaProfesores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListaProfesores.FlatAppearance.BorderSize = 0;
+            this.btnListaProfesores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnListaProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaProfesores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaProfesores.ForeColor = System.Drawing.Color.White;
+            this.btnListaProfesores.Location = new System.Drawing.Point(6, 32);
+            this.btnListaProfesores.Name = "btnListaProfesores";
+            this.btnListaProfesores.Size = new System.Drawing.Size(126, 26);
+            this.btnListaProfesores.TabIndex = 2;
+            this.btnListaProfesores.Text = "Lista";
+            this.btnListaProfesores.UseVisualStyleBackColor = false;
+            this.btnListaProfesores.Click += new System.EventHandler(this.btnListaProfesores_Click);
+            // 
+            // btnAgregarProfe
+            // 
+            this.btnAgregarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAgregarProfe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarProfe.FlatAppearance.BorderSize = 0;
+            this.btnAgregarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAgregarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarProfe.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarProfe.Location = new System.Drawing.Point(7, 2);
+            this.btnAgregarProfe.Name = "btnAgregarProfe";
+            this.btnAgregarProfe.Size = new System.Drawing.Size(126, 26);
+            this.btnAgregarProfe.TabIndex = 2;
+            this.btnAgregarProfe.Text = "Agregar";
+            this.btnAgregarProfe.UseVisualStyleBackColor = false;
+            this.btnAgregarProfe.Click += new System.EventHandler(this.btnAgregarProfe_Click);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel15.Location = new System.Drawing.Point(2, 32);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(5, 26);
+            this.panel15.TabIndex = 3;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel16.Location = new System.Drawing.Point(2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(5, 26);
+            this.panel16.TabIndex = 3;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel14.Location = new System.Drawing.Point(2, 62);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(5, 26);
+            this.panel14.TabIndex = 3;
             // 
             // panel4
             // 
@@ -511,98 +603,6 @@
             this.panelContenedor.TabIndex = 2;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCentral_Paint);
             // 
-            // panelProfesor
-            // 
-            this.panelProfesor.Controls.Add(this.btnModificarProfe);
-            this.panelProfesor.Controls.Add(this.btnListaProfesores);
-            this.panelProfesor.Controls.Add(this.btnAgregarProfe);
-            this.panelProfesor.Controls.Add(this.panel15);
-            this.panelProfesor.Controls.Add(this.panel16);
-            this.panelProfesor.Controls.Add(this.panel14);
-            this.panelProfesor.Location = new System.Drawing.Point(21, 171);
-            this.panelProfesor.Name = "panelProfesor";
-            this.panelProfesor.Size = new System.Drawing.Size(139, 100);
-            this.panelProfesor.TabIndex = 1;
-            this.panelProfesor.Visible = false;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel14.Location = new System.Drawing.Point(2, 62);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(5, 26);
-            this.panel14.TabIndex = 3;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel15.Location = new System.Drawing.Point(2, 32);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(5, 26);
-            this.panel15.TabIndex = 3;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel16.Location = new System.Drawing.Point(2, 2);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(5, 26);
-            this.panel16.TabIndex = 3;
-            // 
-            // btnAgregarProfe
-            // 
-            this.btnAgregarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnAgregarProfe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregarProfe.FlatAppearance.BorderSize = 0;
-            this.btnAgregarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnAgregarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarProfe.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarProfe.Location = new System.Drawing.Point(7, 2);
-            this.btnAgregarProfe.Name = "btnAgregarProfe";
-            this.btnAgregarProfe.Size = new System.Drawing.Size(126, 26);
-            this.btnAgregarProfe.TabIndex = 2;
-            this.btnAgregarProfe.Text = "Agregar";
-            this.btnAgregarProfe.UseVisualStyleBackColor = false;
-            this.btnAgregarProfe.Click += new System.EventHandler(this.btnAgregarProfe_Click);
-            // 
-            // btnListaProfesores
-            // 
-            this.btnListaProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnListaProfesores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListaProfesores.FlatAppearance.BorderSize = 0;
-            this.btnListaProfesores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnListaProfesores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaProfesores.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaProfesores.ForeColor = System.Drawing.Color.White;
-            this.btnListaProfesores.Location = new System.Drawing.Point(6, 32);
-            this.btnListaProfesores.Name = "btnListaProfesores";
-            this.btnListaProfesores.Size = new System.Drawing.Size(126, 26);
-            this.btnListaProfesores.TabIndex = 2;
-            this.btnListaProfesores.Text = "Lista";
-            this.btnListaProfesores.UseVisualStyleBackColor = false;
-            this.btnListaProfesores.Click += new System.EventHandler(this.btnListaProfesores_Click);
-            // 
-            // btnModificarProfe
-            // 
-            this.btnModificarProfe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnModificarProfe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarProfe.FlatAppearance.BorderSize = 0;
-            this.btnModificarProfe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnModificarProfe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarProfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarProfe.ForeColor = System.Drawing.Color.White;
-            this.btnModificarProfe.Location = new System.Drawing.Point(7, 62);
-            this.btnModificarProfe.Name = "btnModificarProfe";
-            this.btnModificarProfe.Size = new System.Drawing.Size(126, 26);
-            this.btnModificarProfe.TabIndex = 2;
-            this.btnModificarProfe.Text = "Modificar";
-            this.btnModificarProfe.UseVisualStyleBackColor = false;
-            this.btnModificarProfe.Click += new System.EventHandler(this.btnModificarProfe_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,8 +627,8 @@
             this.panelSubMenuReportes.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).EndInit();
             this.panelProfesor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -654,11 +654,11 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnGraduados;
+        private System.Windows.Forms.Button btnAsignarNotas;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button btnReporteEstudianteGrado;
+        private System.Windows.Forms.Button btnMostrarNotas;
         private System.Windows.Forms.Panel panelAlumnos;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
