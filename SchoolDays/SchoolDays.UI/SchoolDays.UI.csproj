@@ -32,8 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +75,12 @@
     <Compile Include="Vistas\ListaAlumnos.Designer.cs">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\ListaProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ListaProfesor.Designer.cs">
+      <DependentUpon>ListaProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +92,18 @@
     </Compile>
     <Compile Include="Vistas\Modificar.Designer.cs">
       <DependentUpon>Modificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ModificarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\ModificarProfesor.Designer.cs">
+      <DependentUpon>ModificarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Notas.Designer.cs">
+      <DependentUpon>Notas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Profesor.cs">
       <SubType>Form</SubType>
@@ -101,11 +129,20 @@
     <EmbeddedResource Include="Vistas\ListaAlumnos.resx">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ListaProfesor.resx">
+      <DependentUpon>ListaProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Modificar.resx">
       <DependentUpon>Modificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\ModificarProfesor.resx">
+      <DependentUpon>ModificarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Profesor.resx">
       <DependentUpon>Profesor.cs</DependentUpon>
@@ -122,6 +159,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolDays.BL\SchoolDays.BL.csproj">
+      <Project>{ee20b30e-241c-4e56-a7f1-9839d4ff3336}</Project>
+      <Name>SchoolDays.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolDays.DATA\SchoolDays.DAL%28DATA%29.csproj">
+      <Project>{948EF59E-107D-4BBC-AEFB-2A7101D7626E}</Project>
+      <Name>SchoolDays.DAL%28DATA%29</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

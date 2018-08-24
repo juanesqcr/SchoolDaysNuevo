@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SchoolDaysModelStoreContainer" CdmEntityContainer="SchoolDaysEntities2">
+    <EntitySetMapping Name="Estudiantes">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Estudiante">
+        <MappingFragment StoreEntitySet="Estudiante">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Nombre_Papa" ColumnName="Nombre_Papa" />
+          <ScalarProperty Name="Numero_Papa" ColumnName="Numero_Papa" />
+          <ScalarProperty Name="Nombre_Mama" ColumnName="Nombre_Mama" />
+          <ScalarProperty Name="Numero_Mama" ColumnName="Numero_Mama" />
+          <ScalarProperty Name="Telefono_Hogar" ColumnName="Telefono_Hogar" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="CorreoOtro" ColumnName="CorreoOtro" />
+          <ScalarProperty Name="Otros" ColumnName="Otros" />
+          <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grados">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Grado">
+        <MappingFragment StoreEntitySet="Grados">
+          <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
+          <ScalarProperty Name="Grado1" ColumnName="Grado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Horario">
+        <MappingFragment StoreEntitySet="Horario">
+          <ScalarProperty Name="ID_Horario" ColumnName="ID_Horario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Turno" ColumnName="Turno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materias">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Materia">
+        <MappingFragment StoreEntitySet="Materia">
+          <ScalarProperty Name="ID_Materia" ColumnName="ID_Materia" />
+          <ScalarProperty Name="NombreMateria" ColumnName="NombreMateria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mensualidads">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Mensualidad">
+        <MappingFragment StoreEntitySet="Mensualidad">
+          <ScalarProperty Name="ID_Mensualidad" ColumnName="ID_Mensualidad" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="ID_Estudiante" ColumnName="ID_Estudiante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notas">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Nota">
+        <MappingFragment StoreEntitySet="Notas">
+          <ScalarProperty Name="ID_Nota" ColumnName="ID_Nota" />
+          <ScalarProperty Name="PrimerParcial" ColumnName="PrimerParcial" />
+          <ScalarProperty Name="SegundoParcial" ColumnName="SegundoParcial" />
+          <ScalarProperty Name="TercerParcial" ColumnName="TercerParcial" />
+          <ScalarProperty Name="Tareas" ColumnName="Tareas" />
+          <ScalarProperty Name="TrabajoCotidiano" ColumnName="TrabajoCotidiano" />
+          <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
+          <ScalarProperty Name="ID_Profesor" ColumnName="ID_Profesor" />
+          <ScalarProperty Name="ID_Materia" ColumnName="ID_Materia" />
+          <ScalarProperty Name="ID_Estudiante" ColumnName="ID_Estudiante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesors">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Profesor">
+        <MappingFragment StoreEntitySet="Profesor">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Telefono_Hogar" ColumnName="Telefono_Hogar" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="DireccionHogar" ColumnName="DireccionHogar" />
+          <ScalarProperty Name="ID_Materia" ColumnName="ID_Materia" />
+          <ScalarProperty Name="ID_Salario" ColumnName="ID_Salario" />
+          <ScalarProperty Name="ID_Horario" ColumnName="ID_Horario" />
+          <ScalarProperty Name="ID_Grado" ColumnName="ID_Grado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salarios">
+      <EntityTypeMapping TypeName="SchoolDaysModel.Salario">
+        <MappingFragment StoreEntitySet="Salario">
+          <ScalarProperty Name="ID_Salario" ColumnName="ID_Salario" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SchoolDaysModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
