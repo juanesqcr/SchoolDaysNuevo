@@ -17,6 +17,8 @@ namespace SchoolDays.UI.Vistas
         public ListaProfesor()
         {
             InitializeComponent();
+            CargaGrid();
+
         }
 
         #region botones

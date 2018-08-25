@@ -19,6 +19,8 @@ namespace SchoolDays.UI.Vistas
         public ListaAlumnos()
         {
             InitializeComponent();
+            CargarGrid();
+
         }
 
         private void dgvListaAlumnos_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -78,3 +78,4 @@ C:\Users\juane\OneDrive\Documentos\GitHub\SchoolDaysNuevo2\SchoolDays\SchoolDays
 D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\obj\Debug\SchoolDays.UI.Vistas.Notas.resources
+D:\GitHub\SchoolDaysNuevo\SchoolDays\SchoolDays.UI\obj\Debug\SchoolDays.UI.Vistas.ListaNotas.resources

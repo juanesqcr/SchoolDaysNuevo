@@ -56,7 +56,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtGrado = new System.Windows.Forms.NumericUpDown();
-            this.btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroMama)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroHogar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeroPapa)).BeginInit();
@@ -380,26 +379,12 @@
             this.txtGrado.Size = new System.Drawing.Size(210, 20);
             this.txtGrado.TabIndex = 54;
             // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Enabled = false;
-            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar.Location = new System.Drawing.Point(596, 411);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(84, 26);
-            this.btn_eliminar.TabIndex = 55;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
-            // 
             // Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.txtGrado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombreMama);
@@ -470,6 +455,5 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown txtGrado;
         public System.Windows.Forms.NumericUpDown txtNumeroHogar;
-        private System.Windows.Forms.Button btn_eliminar;
     }
 }

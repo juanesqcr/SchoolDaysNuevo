@@ -90,6 +90,7 @@ namespace SchoolDays.UI
         private void btnReporteEstudianteGrado_Click(object sender, EventArgs e)
         {
             panelSubMenuReportes.Visible = false;
+            AbrirForm(new ListaNotas());
         }
         private void btnReporte_Click(object sender, EventArgs e)
         {

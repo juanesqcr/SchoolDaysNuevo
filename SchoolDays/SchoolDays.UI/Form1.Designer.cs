@@ -34,6 +34,12 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panelMenuVertical = new System.Windows.Forms.Panel();
+            this.panelSubMenuReportes = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnMostrarNotas = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnAsignarNotas = new System.Windows.Forms.Button();
             this.panelAlumnos = new System.Windows.Forms.Panel();
             this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.btnListaAlumnos = new System.Windows.Forms.Button();
@@ -41,15 +47,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.panelSubMenuReportes = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnMostrarNotas = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.btnAsignarNotas = new System.Windows.Forms.Button();
             this.panelProfesor = new System.Windows.Forms.Panel();
             this.btnModificarProfe = new System.Windows.Forms.Button();
             this.btnListaProfesores = new System.Windows.Forms.Button();
@@ -72,10 +69,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panelMenuVertical.SuspendLayout();
-            this.panelAlumnos.SuspendLayout();
             this.panelSubMenuReportes.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panelAlumnos.SuspendLayout();
             this.panelProfesor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).BeginInit();
             this.SuspendLayout();
@@ -158,6 +154,85 @@
             this.panelMenuVertical.Name = "panelMenuVertical";
             this.panelMenuVertical.Size = new System.Drawing.Size(165, 500);
             this.panelMenuVertical.TabIndex = 1;
+            // 
+            // panelSubMenuReportes
+            // 
+            this.panelSubMenuReportes.Controls.Add(this.panel7);
+            this.panelSubMenuReportes.Controls.Add(this.btnMostrarNotas);
+            this.panelSubMenuReportes.Controls.Add(this.panel6);
+            this.panelSubMenuReportes.Controls.Add(this.btnAsignarNotas);
+            this.panelSubMenuReportes.Location = new System.Drawing.Point(22, 201);
+            this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(2);
+            this.panelSubMenuReportes.Name = "panelSubMenuReportes";
+            this.panelSubMenuReportes.Size = new System.Drawing.Size(139, 96);
+            this.panelSubMenuReportes.TabIndex = 8;
+            this.panelSubMenuReportes.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel7.Controls.Add(this.panel8);
+            this.panel7.Location = new System.Drawing.Point(0, 33);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(4, 26);
+            this.panel7.TabIndex = 11;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel8.Location = new System.Drawing.Point(-65, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(4, 26);
+            this.panel8.TabIndex = 13;
+            // 
+            // btnMostrarNotas
+            // 
+            this.btnMostrarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnMostrarNotas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrarNotas.FlatAppearance.BorderSize = 0;
+            this.btnMostrarNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnMostrarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarNotas.ForeColor = System.Drawing.Color.White;
+            this.btnMostrarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMostrarNotas.Location = new System.Drawing.Point(2, 33);
+            this.btnMostrarNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMostrarNotas.Name = "btnMostrarNotas";
+            this.btnMostrarNotas.Size = new System.Drawing.Size(132, 26);
+            this.btnMostrarNotas.TabIndex = 14;
+            this.btnMostrarNotas.Text = "Ver notas";
+            this.btnMostrarNotas.UseVisualStyleBackColor = false;
+            this.btnMostrarNotas.Click += new System.EventHandler(this.btnReporteEstudianteGrado_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.panel6.Location = new System.Drawing.Point(0, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(4, 26);
+            this.panel6.TabIndex = 9;
+            // 
+            // btnAsignarNotas
+            // 
+            this.btnAsignarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAsignarNotas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsignarNotas.FlatAppearance.BorderSize = 0;
+            this.btnAsignarNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.btnAsignarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsignarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignarNotas.ForeColor = System.Drawing.Color.White;
+            this.btnAsignarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsignarNotas.Location = new System.Drawing.Point(2, 2);
+            this.btnAsignarNotas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAsignarNotas.Name = "btnAsignarNotas";
+            this.btnAsignarNotas.Size = new System.Drawing.Size(132, 26);
+            this.btnAsignarNotas.TabIndex = 10;
+            this.btnAsignarNotas.Text = "Asignar Notas";
+            this.btnAsignarNotas.UseVisualStyleBackColor = false;
+            this.btnAsignarNotas.Click += new System.EventHandler(this.btnGraduados_Click);
             // 
             // panelAlumnos
             // 
@@ -249,125 +324,6 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(5, 26);
             this.panel12.TabIndex = 2;
-            // 
-            // panelSubMenuReportes
-            // 
-            this.panelSubMenuReportes.Controls.Add(this.panel9);
-            this.panelSubMenuReportes.Controls.Add(this.panel7);
-            this.panelSubMenuReportes.Controls.Add(this.btnMostrarNotas);
-            this.panelSubMenuReportes.Controls.Add(this.btnReporte);
-            this.panelSubMenuReportes.Controls.Add(this.panel6);
-            this.panelSubMenuReportes.Controls.Add(this.btnAsignarNotas);
-            this.panelSubMenuReportes.Location = new System.Drawing.Point(22, 201);
-            this.panelSubMenuReportes.Margin = new System.Windows.Forms.Padding(2);
-            this.panelSubMenuReportes.Name = "panelSubMenuReportes";
-            this.panelSubMenuReportes.Size = new System.Drawing.Size(139, 96);
-            this.panelSubMenuReportes.TabIndex = 8;
-            this.panelSubMenuReportes.Visible = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Location = new System.Drawing.Point(0, 64);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(4, 26);
-            this.panel9.TabIndex = 14;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel10.Location = new System.Drawing.Point(-65, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(4, 26);
-            this.panel10.TabIndex = 13;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Location = new System.Drawing.Point(0, 33);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(4, 26);
-            this.panel7.TabIndex = 11;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel8.Location = new System.Drawing.Point(-65, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(4, 26);
-            this.panel8.TabIndex = 13;
-            // 
-            // btnMostrarNotas
-            // 
-            this.btnMostrarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnMostrarNotas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMostrarNotas.FlatAppearance.BorderSize = 0;
-            this.btnMostrarNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnMostrarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMostrarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarNotas.ForeColor = System.Drawing.Color.White;
-            this.btnMostrarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMostrarNotas.Location = new System.Drawing.Point(2, 33);
-            this.btnMostrarNotas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnMostrarNotas.Name = "btnMostrarNotas";
-            this.btnMostrarNotas.Size = new System.Drawing.Size(132, 26);
-            this.btnMostrarNotas.TabIndex = 14;
-            this.btnMostrarNotas.Text = "Ver notas";
-            this.btnMostrarNotas.UseVisualStyleBackColor = false;
-            this.btnMostrarNotas.Click += new System.EventHandler(this.btnReporteEstudianteGrado_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReporte.FlatAppearance.BorderSize = 0;
-            this.btnReporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 64);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(132, 26);
-            this.btnReporte.TabIndex = 12;
-            this.btnReporte.Text = "Aulas";
-            this.btnReporte.UseVisualStyleBackColor = false;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.panel6.Location = new System.Drawing.Point(0, 2);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(4, 26);
-            this.panel6.TabIndex = 9;
-            // 
-            // btnAsignarNotas
-            // 
-            this.btnAsignarNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnAsignarNotas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAsignarNotas.FlatAppearance.BorderSize = 0;
-            this.btnAsignarNotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.btnAsignarNotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsignarNotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignarNotas.ForeColor = System.Drawing.Color.White;
-            this.btnAsignarNotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAsignarNotas.Location = new System.Drawing.Point(2, 2);
-            this.btnAsignarNotas.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAsignarNotas.Name = "btnAsignarNotas";
-            this.btnAsignarNotas.Size = new System.Drawing.Size(132, 26);
-            this.btnAsignarNotas.TabIndex = 10;
-            this.btnAsignarNotas.Text = "Asignar Notas";
-            this.btnAsignarNotas.UseVisualStyleBackColor = false;
-            this.btnAsignarNotas.Click += new System.EventHandler(this.btnGraduados_Click);
             // 
             // panelProfesor
             // 
@@ -623,10 +579,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panelMenuVertical.ResumeLayout(false);
-            this.panelAlumnos.ResumeLayout(false);
             this.panelSubMenuReportes.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panelAlumnos.ResumeLayout(false);
             this.panelProfesor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnPrincipal)).EndInit();
             this.ResumeLayout(false);
@@ -652,11 +607,8 @@
         private System.Windows.Forms.Button btnProfesor;
         private System.Windows.Forms.Panel panelSubMenuReportes;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnAsignarNotas;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnMostrarNotas;
         private System.Windows.Forms.Panel panelAlumnos;
